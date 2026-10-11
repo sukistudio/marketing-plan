@@ -13,7 +13,7 @@
 | path ใน JSON | เดิม → ใหม่ |
 |---|---|
 | `meta.signature` | `… → sukistudio/marketing` → `… → repo ภายในของทีม Marketing (private)` |
-| `team.rules[4]` | `… ใน repo sukistudio/marketing` → `… ใน repo repo ภายในของทีม Marketing (private)` |
+| `team.rules[4]` | `… ใน repo sukistudio/marketing` → `… ใน repo ภายในของทีม Marketing (private)` — ตัดคำ "repo" ที่ซ้ำจากการแทนตรงตัว (artifact ของ redact, Tide อนุมัติ) |
 | `team.repo.name` | `sukistudio/marketing` → `repo ภายในของทีม Marketing (private)` |
 | `channels[0].signature` | `… → sukistudio/marketing (ใน description)` → `… → repo ภายในของทีม Marketing (private) (ใน description)` |
 | `rule6_policy.articles[1].signature_full` | `… → sukistudio/marketing` → `… → repo ภายในของทีม Marketing (private)` |
