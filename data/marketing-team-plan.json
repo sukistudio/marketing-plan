@@ -19,7 +19,7 @@
       "source": "S2c",
       "note": "ตัวเลขบาทที่แปลงจากดอลลาร์เป็นค่าประมาณของ Beam"
     },
-    "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → sukistudio/marketing",
+    "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
     "visibility": "public",
     "public_note": "ฉบับ public: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ตัดรายละเอียด layout ของ repo marketing · เนื้อหาอื่นเหมือนฉบับเต็ม"
   },
@@ -226,10 +226,10 @@
       "ลูกทีมรายงาน Beam เท่านั้น · Beam รายงาน Monday เท่านั้น",
       "ไม่คุยกับ Ripple/Shore ตรง — งานเว็บ/วิดีโอขอผ่าน Monday → Tide",
       "ทุก oracle รัน bypass permissions (เปรมเคาะ 2026-10-11)",
-      "ลูกทีมมี worktree ของตัวเองใน repo sukistudio/marketing"
+      "ลูกทีมมี worktree ของตัวเองใน repo repo ภายในของทีม Marketing (private)"
     ],
     "repo": {
-      "name": "sukistudio/marketing",
+      "name": "repo ภายในของทีม Marketing (private)",
       "visibility": "private"
     }
   },
@@ -279,7 +279,7 @@
       },
       "team_can_post": true,
       "team_post_note": "ผ่าน Studio/API",
-      "signature": "🤖 ผลิตโดย Beam/Glow จาก [เปรม] → sukistudio/marketing (ใน description)",
+      "signature": "🤖 ผลิตโดย Beam/Glow จาก [เปรม] → repo ภายในของทีม Marketing (private) (ใน description)",
       "open_day": 30
     },
     {
@@ -827,7 +827,7 @@
       {
         "n": 2,
         "text": "สิ่งที่ทีมโพสต์/ส่ง/ตอบเองโดยตรง ต้องลงชื่อทุกครั้ง",
-        "signature_full": "🤖 โพสต์โดย <oracle> จาก [เปรม] → sukistudio/marketing",
+        "signature_full": "🤖 โพสต์โดย <oracle> จาก [เปรม] → repo ภายในของทีม Marketing (private)",
         "signature_short": "🤖 Beam (AI)",
         "note": "เปรมเคาะเป็นรายช่อง"
       },
