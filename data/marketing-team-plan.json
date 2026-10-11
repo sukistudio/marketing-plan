@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "แผนทีม Marketing 🌕 (ทีม 12x ใต้ Monday) — ฉบับเสนอเปรม",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "date": "2026-10-11",
     "author": {
       "oracle": "Beam Oracle",
@@ -11,7 +11,7 @@
     },
     "for": "เปรม (ผ่าน Monday)",
     "status": "decided",
-    "statusNote": "เปรมเคาะทางเลือก A — 2026-10-11 · Q1 ไม่มีสินค้านอก GitHub · Q2–Q9 ใช้ default",
+    "statusNote": "เปรมเคาะ A 2026-10-11 · ชื่อแบรนด์เคาะแล้ว (รอจดทะเบียน) · niche ก · draft ชุดแรก 5 ชิ้นผ่าน · รอเปิดบัญชี",
     "source_md": "plan/2026-10_marketing-team-plan.public.md",
     "language": "th",
     "fx_assumption": {
@@ -21,7 +21,7 @@
     },
     "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
     "visibility": "public",
-    "public_note": "ฉบับ public v4: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
+    "public_note": "ฉบับ public v6: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม · ชื่อแบรนด์ไม่เปิดเผยจนจดทะเบียนเสร็จ",
     "decision": {
       "option": "A",
       "label": "A — เคาะ 2026-10-11",
@@ -30,7 +30,10 @@
       "via": "Monday (10-monday)",
       "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
       "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
-      "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
+      "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ",
+      "brand": "ชื่อแบรนด์: เคาะแล้ว 2026-10-11 (รอจดทะเบียน)",
+      "niche": "ก วันนี้ในแผนที่ (เปรมเคาะ 2026-10-11)",
+      "first_batch": "draft 5 ชิ้น ✅ 2026-10-11 · ยังไม่โพสต์ รอเปรมเปิดบัญชี"
     }
   },
   "summary": {
@@ -896,14 +899,14 @@
       "question": "ชื่อแบรนด์/ช่อง: ใช้ SUKISTUDIO ได้ไหม หรือตั้งใหม่ · มีโลโก้/สีไหม",
       "default_if_unanswered": "เสนอ 3 ชื่อ + brand kit ชั่วคราว sprint 1",
       "priority": 2,
-      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+      "answer": "ตอบแล้ว 2026-10-11: ชื่อแบรนด์: เคาะแล้ว 2026-10-11 (รอจดทะเบียน)"
     },
     {
       "id": "Q3",
       "question": "ถ้า A: หัวข้อแผนที่ที่สนใจจริง (ประวัติศาสตร์/ท่องเที่ยว/ข่าวโลก/เปรียบเทียบ/อื่น) · ไทยก่อนใช่ไหม",
       "default_if_unanswered": "Pulse วิจัยเสนอ 3 niche ใน 7 วัน",
       "priority": 2,
-      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+      "answer": "ตอบแล้ว: ชุด ก วันนี้ในแผนที่ (2026-10-11)"
     },
     {
       "id": "Q4",
@@ -917,7 +920,7 @@
       "question": "เปรมโอเคเป็นหน้าแบรนด์บางส่วนไหม (เสียง/ชื่อจริง/ปรากฏตัว) หรือแบรนด์ไร้หน้า",
       "default_if_unanswered": "แบรนด์ไร้หน้า · เสียงสังเคราะห์ที่ระบุว่า AI (ต้องเคาะเครื่องมือ) หรือคลิปตัวอักษร",
       "priority": 2,
-      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+      "answer": "ยังไม่ตอบ → ไม่มีเสียงพูด (default) (2026-10-11)"
     },
     {
       "id": "Q6",
@@ -1011,6 +1014,9 @@
     "via": "Monday (10-monday)",
     "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
     "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
-    "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
+    "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ",
+    "brand": "ชื่อแบรนด์: เคาะแล้ว 2026-10-11 (รอจดทะเบียน)",
+    "niche": "ก วันนี้ในแผนที่ (เปรมเคาะ 2026-10-11)",
+    "first_batch": "draft 5 ชิ้น ✅ 2026-10-11 · ยังไม่โพสต์ รอเปรมเปิดบัญชี"
   }
 }
