@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "แผนทีม Marketing 🌕 (ทีม 12x ใต้ Monday) — ฉบับเสนอเปรม",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "date": "2026-10-11",
     "author": {
       "oracle": "Beam Oracle",
@@ -10,8 +10,8 @@
       "ai": true
     },
     "for": "เปรม (ผ่าน Monday)",
-    "status": "draft",
-    "statusNote": "รอเปรมเคาะคำถาม Q1–Q9",
+    "status": "decided",
+    "statusNote": "เปรมเคาะทางเลือก A — 2026-10-11 · Q1 ไม่มีสินค้านอก GitHub · Q2–Q9 ใช้ default",
     "source_md": "plan/2026-10_marketing-team-plan.public.md",
     "language": "th",
     "fx_assumption": {
@@ -21,7 +21,17 @@
     },
     "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
     "visibility": "public",
-    "public_note": "ฉบับ public: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ตัดรายละเอียด layout ของ repo marketing · เนื้อหาอื่นเหมือนฉบับเต็ม"
+    "public_note": "ฉบับ public v2: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
+    "decision": {
+      "option": "A",
+      "label": "A — เคาะ 2026-10-11",
+      "decided_by": "เปรม",
+      "date": "2026-10-11",
+      "via": "Monday (10-monday)",
+      "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
+      "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
+      "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
+    }
   },
   "summary": {
     "what_to_market": "ยังไม่สมมติ — เสนอ 3 ทางเลือก · Beam แนะนำ A เป็นแกน + C ชั้นรอง (80/20) · B รอ A พิสูจน์ 90 วัน",
@@ -70,7 +80,7 @@
       "id": "A",
       "name": "ช่อง \"เล่าเรื่องด้วยแผนที่\" (YouTube/Shorts + TikTok) ใช้ map-story เป็นเครื่องผลิต",
       "recommended": true,
-      "role": "แกน (~80%)",
+      "role": "แกน (~80%) · ✅ เปรมเคาะ 2026-10-11",
       "description": "ช่องคอนเทนต์ก่อนมีสินค้า: คลิปสั้น 15–60 วิ เรื่องเล่าบนแผนที่ (ประวัติศาสตร์ · ภูมิศาสตร์ · ท่องเที่ยว · ข่าวโลก · ข้อมูลเปรียบเทียบประเทศ) ไทยก่อน อังกฤษตาม",
       "pros": [
         "ใช้ของที่มีจริง ไม่ต้องรอสินค้า · format 9:16 พร้อม",
@@ -89,7 +99,8 @@
         "บัญชี YouTube + TikTok",
         "map-story Phase 2 (หลายฉาก, เส้นทาง, ข้อความซ้อน, เสียง) — ขอผ่าน Monday → Tide",
         "brand kit (Sarabun มีแล้ว)"
-      ]
+      ],
+      "decided": true
     },
     {
       "id": "B",
@@ -111,7 +122,8 @@
         "ราคา",
         "ตัวอย่างงาน 5–10 ชิ้น (จาก A)",
         "landing page + ช่องติดต่อ (LINE OA / อีเมล)"
-      ]
+      ],
+      "decided": false
     },
     {
       "id": "C",
@@ -133,13 +145,15 @@
       "requirements": [
         "เปรมตกลงว่าเปิดเผยอะไรได้/ไม่ได้",
         "ชื่อแบรนด์สตูดิโอ (Q2)"
-      ]
+      ],
+      "decided": false
     }
   ],
   "recommendation": {
     "text": "A เป็นแกน + C ชั้นรอง ~80/20 · B รอผลจาก A 90 วัน",
     "reason": "A ใช้ของที่มีจริง ไม่ต้องตัดสินเรื่อง product ก่อน และผลงานจาก A เป็น portfolio ให้ B อัตโนมัติ",
-    "caveat": "ถ้าเปรมมีสินค้า/บริการจริงนอก GitHub (Q1) แผนทั้งหมดต้องปรับ — Beam เขียน v2 ภายใน 1 วันหลังได้คำตอบ"
+    "caveat": "ถ้าเปรมมีสินค้า/บริการจริงนอก GitHub (Q1) แผนทั้งหมดต้องปรับ — Beam เขียน v2 ภายใน 1 วันหลังได้คำตอบ",
+    "outcome": "เปรมเคาะ A — 2026-10-11 (ผ่าน Monday) · C ชั้นรองยังเป็นข้อเสนอ · B รอ 90 วัน"
   },
   "team": {
     "hierarchy": [
@@ -226,7 +240,7 @@
       "ลูกทีมรายงาน Beam เท่านั้น · Beam รายงาน Monday เท่านั้น",
       "ไม่คุยกับ Ripple/Shore ตรง — งานเว็บ/วิดีโอขอผ่าน Monday → Tide",
       "ทุก oracle รัน bypass permissions (เปรมเคาะ 2026-10-11)",
-      "ลูกทีมมี worktree ของตัวเองใน repo ภายในของทีม Marketing (private)"
+      "ลูกทีมมี worktree ของตัวเองใน repo repo ภายในของทีม Marketing (private)"
     ],
     "repo": {
       "name": "repo ภายในของทีม Marketing (private)",
@@ -872,55 +886,64 @@
       "id": "Q1",
       "question": "มีสินค้า/บริการจริงที่ขายอยู่หรือตั้งใจจะขายนอก GitHub ไหม ถ้ามีคืออะไร",
       "default_if_unanswered": "ถือว่าไม่มี → เดิน A",
-      "priority": 1
+      "priority": 1,
+      "answer": "ตอบแล้ว: ถือว่าไม่มี → เดิน A (2026-10-11)"
     },
     {
       "id": "Q2",
       "question": "ชื่อแบรนด์/ช่อง: ใช้ SUKISTUDIO ได้ไหม หรือตั้งใหม่ · มีโลโก้/สีไหม",
       "default_if_unanswered": "เสนอ 3 ชื่อ + brand kit ชั่วคราว sprint 1",
-      "priority": 2
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q3",
       "question": "ถ้า A: หัวข้อแผนที่ที่สนใจจริง (ประวัติศาสตร์/ท่องเที่ยว/ข่าวโลก/เปรียบเทียบ/อื่น) · ไทยก่อนใช่ไหม",
       "default_if_unanswered": "Pulse วิจัยเสนอ 3 niche ใน 7 วัน",
-      "priority": 2
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q4",
       "question": "map-story จะเป็น product/บริการขายในอนาคตไหม หรือเครื่องมือภายในตลอด",
       "default_if_unanswered": "เครื่องมือภายใน → ไม่ทำ B ใน 90 วัน",
-      "priority": 3
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q5",
       "question": "เปรมโอเคเป็นหน้าแบรนด์บางส่วนไหม (เสียง/ชื่อจริง/ปรากฏตัว) หรือแบรนด์ไร้หน้า",
       "default_if_unanswered": "แบรนด์ไร้หน้า · เสียงสังเคราะห์ที่ระบุว่า AI (ต้องเคาะเครื่องมือ) หรือคลิปตัวอักษร",
-      "priority": 2
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q6",
       "question": "โดเมนเว็บ: มีแล้วไหม หรือเสนอซื้อใหม่ (≈ 400–600 บาท/ปี เปรมจ่ายเอง)",
       "default_if_unanswered": "เสนอ 3 ชื่อ Phase 3",
-      "priority": 4
+      "priority": 4,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q7",
       "question": "เพดานงบที่เสียเงินช่วง 90 วันแรก/เดือน: 0 · ≤5,000 · ≤15,000 · ≤30,000",
       "default_if_unanswered": "ชั้น 0 อย่างเดียว",
-      "priority": 3
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q8",
       "question": "ช่องไหนที่ไม่อยากให้ทีมโพสต์เองเลย แม้ภายหลัง",
       "default_if_unanswered": "ทุกช่องเริ่มที่เปรมกด ปลดทีละช่อง",
-      "priority": 4
+      "priority": 4,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     },
     {
       "id": "Q9",
       "question": "อยากดูชุดโพสต์เพื่อ approve ผ่านอะไร: GitHub PR / เว็บ (Tide ทำ) / LINE ส่วนตัว",
       "default_if_unanswered": "PR + สรุปผ่าน Monday",
-      "priority": 3
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
     }
   ],
   "sources": {
@@ -977,5 +1000,15 @@
       "title": "Postproxy — X API Pricing 2026",
       "url": "https://www.postproxy.dev/blog/x-api-pricing-2026/"
     }
+  },
+  "decision": {
+    "option": "A",
+    "label": "A — เคาะ 2026-10-11",
+    "decided_by": "เปรม",
+    "date": "2026-10-11",
+    "via": "Monday (10-monday)",
+    "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
+    "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
+    "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
   }
 }

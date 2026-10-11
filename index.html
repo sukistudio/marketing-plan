@@ -124,6 +124,15 @@
   .summary .k { font-weight: 700; color: var(--gold); }
   @media (max-width: 560px) { .summary .row { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
 
+  /* decision banner (v2) */
+  .decision { margin: 22px 0 0; padding: 14px 16px; border-radius: var(--radius); background: var(--ok-bg); border: 2px solid var(--ok); }
+  .decision .big { margin: 0; font-weight: 700; font-size: 1.12rem; color: var(--ok); }
+  .decision dl { margin: 8px 0 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 3px 12px; font-size: .92rem; }
+  .decision dt { color: var(--muted); white-space: nowrap; }
+  .decision dd { margin: 0; min-width: 0; }
+  @media (max-width: 420px) { .decision dl { grid-template-columns: minmax(0, 1fr); } .decision dt { margin-top: 4px; } }
+  .q .ans { margin-top: 4px; font-size: .9rem; font-weight: 600; color: var(--ok); }
+
   /* 2 options */
   .opt { --accent: var(--line-strong); display: flex; flex-direction: column; gap: 8px; }
   .opt.rec { --accent: var(--gold); border-width: 2px; border-top-width: 5px; border-color: var(--gold); }
@@ -326,8 +335,17 @@
     document.getElementById("eyebrow").innerHTML = `${esc(m.author.emoji)} เขียนโดย ${esc(m.author.oracle)} (AI · ${esc(m.author.session)}) · สำหรับ ${esc(m.for)}`;
     document.getElementById("title").textContent = m.title;
     document.getElementById("badges").innerHTML =
-      `<span class="pill gold">สถานะ: ${esc(m.status)} <small>· ${esc(m.statusNote)}</small></span>` +
+      `<span class="pill ${m.status === "decided" ? "" : "gold"}"${m.status === "decided" ? ` style="background:var(--ok-bg);color:var(--ok);border-color:transparent"` : ""}>สถานะ: ${esc(m.status)} <small>· ${esc(m.statusNote)}</small></span>` +
       `<span class="pill">ข้อมูล ณ ${esc(m.date)} <small>· v${esc(m.version)}</small></span>`;
+  }
+
+  // ผลการเคาะ (มีใน JSON v2) — แสดงเหนือสรุป
+  function decision(d) {
+    const x = d.decision || d.meta.decision;
+    if (!x) return "";
+    const rows = [["เคาะโดย", `${esc(x.decided_by)}${x.via ? ` <span class="muted">ผ่าน ${esc(x.via)}</span>` : ""} · ${esc(x.date)}`], ["Q1", txt(x.q1)], ["Q2–Q9", txt(x.q2_q9)], ["ขั้นต่อไป", txt(x.next)]]
+      .filter(([, v]) => v && !/^(undefined|null)?$/.test(v));
+    return `<div class="decision" role="status"><p class="big">✅ เปรมเคาะแล้ว: ${txt(x.label)}</p><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>`;
   }
 
   function summary(d) {
@@ -341,16 +359,17 @@
     const cards = d.options.map((o) => `
       <article class="card opt${o.recommended ? " rec" : ""}">
         <div class="head"><div class="letter">${esc(o.id)}</div><div class="name">${txt(o.name)}</div></div>
-        <div class="meta">${o.recommended ? `<span class="tag t-gold">⭐ Beam แนะนำ</span>` : ""}<span class="tag t-silver">${esc(o.role)}</span></div>
+        <div class="meta">${o.decided ? `<span class="tag t-ok">✅ เปรมเคาะ</span>` : ""}${o.recommended ? `<span class="tag t-gold">⭐ Beam แนะนำ</span>` : ""}<span class="tag t-silver">${esc(o.role)}</span></div>
         <p style="margin:0">${txt(o.description)}</p>
         <div class="pros"><h4>ข้อดี</h4>${list(o.pros)}</div>
         <div class="cons"><h4>ข้อเสีย</h4>${list(o.cons)}</div>
         <div><h4>สิ่งที่ต้องมี</h4>${list(o.requirements)}</div>
       </article>`).join("");
     const r = d.recommendation;
-    return section("options", "2", "ทางเลือก A / B / C", "ทำการตลาดให้อะไร — ยังไม่สมมติสินค้า Beam เสนอ 3 ทางให้เปรมเคาะ",
+    const picked = d.options.find((o) => o.decided);
+    return section("options", "2", "ทางเลือก A / B / C", picked ? `ทำการตลาดให้อะไร — Beam เสนอ 3 ทาง · เปรมเคาะ ${esc(picked.id)} แล้ว` : "ทำการตลาดให้อะไร — ยังไม่สมมติสินค้า Beam เสนอ 3 ทางให้เปรมเคาะ",
       `<div class="grid g3">${cards}</div>
-       <div class="reco"><p class="big">⭐ Beam แนะนำ: ${txt(r.text)}</p><p><b>เหตุผล:</b> ${txt(r.reason)}</p><p><b>ข้อควรรู้:</b> ${txt(r.caveat)}</p></div>`);
+       <div class="reco"><p class="big">⭐ Beam แนะนำ: ${txt(r.text)}</p><p><b>เหตุผล:</b> ${txt(r.reason)}</p><p><b>ข้อควรรู้:</b> ${txt(r.caveat)}</p>${r.outcome ? `<p><b>ผล:</b> ${txt(r.outcome)}</p>` : ""}</div>`);
   }
 
   function team(d) {
@@ -407,7 +426,7 @@
         ${Object.entries(pr).map(([k, v]) => `<span class="pill">${esc(label[k] || k)} <b>${num(v)}</b> ล้าน</span>`).join("")}
       </div><p class="section-note small">ไทย ณ ${esc(c.reference_date)} ${srcLink(c.source)} · ${txt(c.note)}</p>`;
     const post = (v) => (v === true ? `<span class="tag t-ok">ทีมโพสต์เองได้</span>` : v === "partial" ? `<span class="tag t-warn">โพสต์เองได้บางส่วน</span>` : `<span class="tag t-no">ทีมไม่โพสต์เอง</span>`);
-    const day = (n) => (n == null ? `<span class="tag">ตามโอกาส</span>` : `<span class="tag t-gold">เปิดวันที่ ${num(n)}</span>`);
+    const day = (n) => (n == null ? `<span class="tag">ตามโอกาส</span>` : `<span class="tag t-gold">เปิดวัน ${num(n)}</span>`);
     const cards = d.channels.map((ch) => {
       const rows = [
         ["บทบาท", txt(ch.funnel_th)],
@@ -429,7 +448,7 @@
         <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       </article>`;
     }).join("");
-    return section("channels", "4", "ช่องทาง", "เปิดทีละชุด: วันที่ 30 / 60 / 90 นับจากเปรมเคาะ",
+    return section("channels", "4", "ช่องทาง", "เปิดทีละชุด: วัน 30 / 60 / 90 นับจากเปรมเคาะ",
       ctx + `<div class="grid g2">${cards}</div><div class="cascade"><b>1 ต้นฉบับ → หลายช่อง:</b> ${txt(d.content_cascade)}</div>`);
   }
 
@@ -471,7 +490,7 @@
     const r = d.roadmap;
     const phases = r.phases.map((p) => `
       <article class="card phase">
-        <div class="days">วันที่ ${num(p.days[0])}–${num(p.days[1])}</div>
+        <div class="days">วัน ${num(p.days[0])}–${num(p.days[1])}</div>
         <h3>${esc(p.name)}</h3>
         <h4>ทำอะไร</h4>${list(p.actions)}
         <h4>KPI</h4>
@@ -500,11 +519,12 @@
         <div class="qid">${esc(q.id)}</div>
         <div>
           <div class="qtext">${txt(q.question)}</div>
+          ${q.answer ? `<div class="ans">→ ${txt(q.answer)}</div>` : ""}
           <div class="def"><b>ถ้าไม่ตอบ:</b> ${txt(q.default_if_unanswered)}</div>
           <span class="tag ${q.priority === 1 ? "t-gold" : "t-silver"}">ลำดับความสำคัญ ${esc(q.priority)}</span>
         </div>
       </li>`).join("");
-    return section("questions", "9", `คำถามถึงเปรม · ${d.questions_for_prem.length} ข้อ`, "เปรมตอบผ่านแชทได้เลย — ไม่ต้องกรอกฟอร์ม · ข้อที่ไม่ตอบ Beam จะใช้ค่าเริ่มต้นที่เขียนไว้",
+    return section("questions", "9", `คำถามถึงเปรม · ${d.questions_for_prem.length} ข้อ`, d.questions_for_prem.some((q) => q.answer) ? "สถานะคำตอบตามที่บันทึกใน JSON · ข้อที่ยังไม่ตอบ Beam ใช้ค่าเริ่มต้นที่เขียนไว้ · ตอบเพิ่มผ่านแชทได้" : "เปรมตอบผ่านแชทได้เลย — ไม่ต้องกรอกฟอร์ม · ข้อที่ไม่ตอบ Beam จะใช้ค่าเริ่มต้นที่เขียนไว้",
       `<div class="qwrap"><ol class="qlist">${qs}</ol></div>`);
   }
 
@@ -526,7 +546,7 @@
     .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
     .then((d) => {
       header(d);
-      document.getElementById("app").innerHTML = [summary, options, team, channels, pipeline, tools, roadmap, rule6, questions, sources].map((f) => f(d)).join("");
+      document.getElementById("app").innerHTML = decision(d) + [summary, options, team, channels, pipeline, tools, roadmap, rule6, questions, sources].map((f) => f(d)).join("");
       if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
     })
     .catch((e) => {
