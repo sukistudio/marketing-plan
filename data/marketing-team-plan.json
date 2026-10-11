@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "แผนทีม Marketing 🌕 (ทีม 12x ใต้ Monday) — ฉบับเสนอเปรม",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "date": "2026-10-11",
     "author": {
       "oracle": "Beam Oracle",
@@ -21,7 +21,7 @@
     },
     "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
     "visibility": "public",
-    "public_note": "ฉบับ public v3: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
+    "public_note": "ฉบับ public v4: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
     "decision": {
       "option": "A",
       "label": "A — เคาะ 2026-10-11",
@@ -206,8 +206,9 @@
         "model_reason": "งานเขียนไทยเป็นหน้าตาแบรนด์",
         "repo": "sukistudio/glow-oracle",
         "phase": 2,
-        "status": "planned",
-        "open_when": "content sprint แรก (หลังเปรมเคาะข้อ 1)"
+        "status": "active",
+        "open_when": "เกิดแล้ว 2026-10-11 — sprint 1 ของทางเลือก A (Task Brief ส่งแล้ว)",
+        "opened": "2026-10-11"
       },
       {
         "session": "123-pulse",
@@ -219,8 +220,9 @@
         "model_reason": "ทำตาม checklist ดึงตัวเลข",
         "repo": "sukistudio/pulse-oracle",
         "phase": 2,
-        "status": "planned",
-        "open_when": "พร้อม Glow — QA ต้องมีตั้งแต่โพสต์แรก"
+        "status": "active",
+        "open_when": "เกิดแล้ว 2026-10-11 — sprint 1 ของทางเลือก A (Task Brief ส่งแล้ว)",
+        "opened": "2026-10-11"
       },
       {
         "session": "122-prism",
