@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>แผนทีม Marketing</title>
+<meta name="description" content="แผนทีม Marketing ที่ Beam Oracle (AI) เสนอเปรม — ทางเลือก ทีม ช่องทาง pipeline เครื่องมือ roadmap 90 วัน และคำถามที่รอเปรมเคาะ">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌕%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* theme: แสงจันทร์ 🌕 — ทอง/เงินบนครีม (light) · ทอง/เงินบนน้ำเงินเข้ม (dark) */
+  :root {
+    --bg: #f8f4ea;
+    --surface: #fffdf8;
+    --surface-2: #f1ebdc;
+    --text: #1b2236;
+    --muted: #5d6273;
+    --line: #ddd3bd;
+    --line-strong: #a39878;
+    --gold: #8a6510;     --gold-bg: #fbf0d2;
+    --silver: #4f5b70;   --silver-bg: #e9edf3;
+    --moon: #4a3fa8;     --moon-bg: #eeecfb;
+    --tide: #0d6b78;     --tide-bg: #e2f4f6;
+    --human: #6b4e16;    --human-bg: #fbf3e2;
+    --ok: #1d7a4c;       --ok-bg: #e2f4ea;
+    --warn: #9a4a0b;     --warn-bg: #fdebd9;
+    --no: #9b2c2c;       --no-bg: #fbe5e5;
+    --link: #6b4e0e;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(40, 30, 10, .06), 0 4px 14px rgba(40, 30, 10, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b1122; --surface: #121a30; --surface-2: #1a2440; --text: #ebe7dc; --muted: #a7adbf;
+      --line: #2c3654; --line-strong: #6a7290;
+      --gold: #f2cf73; --gold-bg: #2d2714; --silver: #c9d2e3; --silver-bg: #222b42;
+      --moon: #b6adff; --moon-bg: #221f3d; --tide: #6fd6e2; --tide-bg: #102c33;
+      --human: #f0cf8c; --human-bg: #2a2416;
+      --ok: #7fdcaa; --ok-bg: #12301f; --warn: #ffb877; --warn-bg: #33220f; --no: #ff9b9b; --no-bg: #361818;
+      --link: #f2cf73;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1122; --surface: #121a30; --surface-2: #1a2440; --text: #ebe7dc; --muted: #a7adbf;
+    --line: #2c3654; --line-strong: #6a7290;
+    --gold: #f2cf73; --gold-bg: #2d2714; --silver: #c9d2e3; --silver-bg: #222b42;
+    --moon: #b6adff; --moon-bg: #221f3d; --tide: #6fd6e2; --tide-bg: #102c33;
+    --human: #f0cf8c; --human-bg: #2a2416;
+    --ok: #7fdcaa; --ok-bg: #12301f; --warn: #ffb877; --warn-bg: #33220f; --no: #ff9b9b; --no-bg: #361818;
+    --link: #f2cf73;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "IBM Plex Sans Thai", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6; overflow-wrap: anywhere;
+  }
+  code, .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .86em; }
+  code { background: var(--surface-2); padding: .05em .4em; border-radius: 6px; }
+  a { color: var(--link); }
+  ul { margin: 0; padding-left: 20px; }
+  li + li { margin-top: 2px; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.top { padding: 40px 0 8px; }
+  .eyebrow { color: var(--muted); font-size: .9rem; margin: 0 0 4px; }
+  h1 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); line-height: 1.25; margin: 0 0 10px; letter-spacing: -.01em; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+    padding: 3px 12px; font-size: .9rem; font-weight: 600;
+  }
+  .pill small { font-weight: 400; color: var(--muted); }
+  .pill.gold { background: var(--gold-bg); color: var(--gold); border-color: transparent; }
+
+  nav.toc { margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  nav.toc a {
+    text-decoration: none; font-size: .85rem; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; background: var(--surface);
+  }
+  nav.toc a:hover { color: var(--text); border-color: var(--line-strong); }
+
+  section { padding: 30px 0 6px; scroll-margin-top: 8px; }
+  h2 { font-size: 1.35rem; margin: 0 0 4px; display: flex; align-items: baseline; gap: 10px; }
+  h2 .n { color: var(--gold); font-variant-numeric: tabular-nums; font-size: 1rem; }
+  h3 { font-size: 1.05rem; margin: 0 0 6px; }
+  .section-note { color: var(--muted); margin: 0 0 16px; font-size: .95rem; }
+  .muted { color: var(--muted); }
+  .small { font-size: .88rem; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-top: 4px solid var(--accent, var(--line-strong));
+    border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; min-width: 0;
+  }
+  .grid { display: grid; gap: 14px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+  .tag {
+    display: inline-block; font-size: .78rem; font-weight: 600; white-space: nowrap;
+    padding: 1px 8px; border-radius: 999px;
+    background: var(--tag-bg, var(--surface-2)); color: var(--tag, var(--muted));
+  }
+  .t-gold { --tag: var(--gold); --tag-bg: var(--gold-bg); }
+  .t-ok { --tag: var(--ok); --tag-bg: var(--ok-bg); }
+  .t-warn { --tag: var(--warn); --tag-bg: var(--warn-bg); }
+  .t-no { --tag: var(--no); --tag-bg: var(--no-bg); }
+  .t-silver { --tag: var(--silver); --tag-bg: var(--silver-bg); }
+  .src { font-size: .78rem; font-weight: 600; text-decoration: none; color: var(--muted); white-space: nowrap; }
+  .src:hover { color: var(--link); text-decoration: underline; }
+
+  /* 1 summary */
+  .summary { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0; overflow: hidden; --accent: var(--gold); }
+  .summary .row { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding: 12px 16px; }
+  .summary .row + .row { border-top: 1px solid var(--line); }
+  .summary .k { font-weight: 700; color: var(--gold); }
+  @media (max-width: 560px) { .summary .row { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+  /* 2 options */
+  .opt { --accent: var(--line-strong); display: flex; flex-direction: column; gap: 8px; }
+  .opt.rec { --accent: var(--gold); border-width: 2px; border-top-width: 5px; border-color: var(--gold); }
+  .opt .head { display: flex; align-items: flex-start; gap: 10px; }
+  .opt .letter {
+    flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+    font-weight: 700; font-size: 1.1rem; background: var(--surface-2); color: var(--text);
+  }
+  .opt.rec .letter { background: var(--gold-bg); color: var(--gold); }
+  .opt .name { font-weight: 700; line-height: 1.4; }
+  .opt .meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .opt h4 { margin: 4px 0 2px; font-size: .9rem; }
+  .opt .pros h4 { color: var(--ok); }
+  .opt .cons h4 { color: var(--warn); }
+  .opt ul { font-size: .92rem; }
+  .reco {
+    margin-top: 14px; padding: 14px 16px; border-radius: var(--radius);
+    background: var(--gold-bg); border: 1px solid color-mix(in srgb, var(--gold) 35%, transparent);
+  }
+  .reco p { margin: 4px 0 0; }
+  .reco .big { font-weight: 700; font-size: 1.08rem; margin: 0; }
+
+  /* 3 team chart */
+  .org { display: flex; flex-direction: column; align-items: center; }
+  .node { width: 100%; max-width: 360px; }
+  .node .who { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.05rem; }
+  .node .who .emo { font-size: 1.25rem; line-height: 1; }
+  .node .who .tag { margin-left: auto; }
+  .node .role { margin: 2px 0 8px; color: var(--muted); font-size: .9rem; }
+  .node dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; font-size: .86rem; }
+  .node dt { color: var(--muted); }
+  .node dd { margin: 0; min-width: 0; }
+  .node.human { --accent: var(--human); }
+  .node.moon { --accent: var(--moon); }
+  .node.beam { --accent: var(--gold); }
+  .node.kid { --accent: var(--silver); }
+  .node.planned { border-style: dashed; border-top-style: solid; }
+  .vline { width: 2px; height: 26px; background: var(--line-strong); }
+  .split2 {
+    position: relative; width: 100%; display: grid; gap: 16px; padding-top: 24px;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: start;
+  }
+  .split2::before { content: ""; position: absolute; top: 0; left: calc((100% - 16px) / 3); right: calc((100% - 16px) / 6); border-top: 2px solid var(--line-strong); }
+  .branch { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+  .branch::before { content: ""; position: absolute; top: -24px; height: 24px; left: 50%; border-left: 2px solid var(--line-strong); }
+  .sibling { width: 100%; max-width: 300px; border: 2px dashed var(--line-strong); border-radius: var(--radius); padding: 12px 14px; background: color-mix(in srgb, var(--tide-bg) 60%, transparent); }
+  .sibling .who { font-weight: 700; }
+  .peer-label { font-size: .78rem; color: var(--muted); margin: 0 0 6px; text-align: center; }
+  .kids {
+    position: relative; width: 100%; display: grid; gap: 12px; padding-top: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .kids::before { content: ""; position: absolute; top: 0; left: calc((100% - 24px) / 6); right: calc((100% - 24px) / 6); border-top: 2px solid var(--line-strong); }
+  .kids > .node { position: relative; max-width: none; }
+  .kids > .node::before { content: ""; position: absolute; top: -28px; height: 24px; left: 50%; border-left: 2px solid var(--line-strong); }
+  .kids .node dl { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .kids .node dt { margin-top: 4px; }
+  @media (max-width: 760px) {
+    .split2 { grid-template-columns: minmax(0, 1fr); padding-top: 0; }
+    .split2::before, .branch::before { display: none; }
+    .branch.sib { order: 2; border-top: 1px solid var(--line); padding-top: 18px; }
+    .kids { grid-template-columns: minmax(0, 1fr); padding-top: 0; gap: 0; }
+    .kids::before { display: none; }
+    .kids > .node::before { display: none; }
+    .kids > .node { margin-top: 26px; }
+    .kids > .node + .node::after { content: ""; position: absolute; top: -27px; left: 50%; height: 26px; border-left: 2px solid var(--line-strong); }
+    .kids > .node:first-child::after { content: ""; position: absolute; top: -27px; left: 50%; height: 26px; border-left: 2px solid var(--line-strong); }
+  }
+  .rules { margin-top: 16px; }
+
+  /* 4 channels */
+  .ctx { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; }
+  .ctx .pill { font-weight: 500; }
+  .ctx .pill b { color: var(--gold); }
+  .ch { --accent: var(--silver); display: flex; flex-direction: column; gap: 6px; }
+  .ch .head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .ch .head .name { font-weight: 700; }
+  .ch .head .tag:first-of-type { margin-left: auto; }
+  .ch dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 3px 10px; font-size: .88rem; }
+  .ch dt { color: var(--muted); white-space: nowrap; }
+  .ch dd { margin: 0; min-width: 0; }
+  .ch dd ul { padding-left: 16px; }
+  .ch.d30 { --accent: var(--gold); }
+  .ch.d60 { --accent: color-mix(in srgb, var(--gold) 55%, var(--silver)); }
+  .ch.d90 { --accent: var(--silver); }
+  .ch.dnone { --accent: var(--line); }
+  @media (max-width: 420px) { .ch dl { grid-template-columns: minmax(0, 1fr); } .ch dt { margin-top: 4px; } }
+  .cascade { margin-top: 14px; padding: 12px 16px; border-left: 4px solid var(--gold); background: var(--surface); border-radius: 0 var(--radius) var(--radius) 0; }
+
+  /* 5 pipeline */
+  .pipe { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; counter-reset: none; }
+  .step { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 12px; position: relative; padding-bottom: 14px; }
+  .step:not(:last-child)::after { content: ""; position: absolute; left: 20px; top: 42px; bottom: 0; border-left: 2px solid var(--line-strong); }
+  .step:not(:last-child)::before { content: "▼"; position: absolute; left: 14px; bottom: -4px; font-size: .7rem; color: var(--line-strong); }
+  .step .num { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--line-strong); font-weight: 700; }
+  .step .body { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 14px; box-shadow: var(--shadow); }
+  .step .title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-weight: 700; }
+  .step .owner { font-weight: 500; }
+  .step p { margin: 4px 0 0; font-size: .92rem; }
+  .step.gate .num { background: var(--gold-bg); border-color: var(--gold); color: var(--gold); }
+  .step.gate .body { border: 2px solid var(--gold); }
+  .gate-label { font-size: .8rem; font-weight: 700; color: var(--gold); background: var(--gold-bg); border-radius: 999px; padding: 1px 10px; }
+  .flow-status { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; font-size: .9rem; }
+
+  /* 6 tools */
+  .tier { --accent: var(--silver); }
+  .tier.t0 { --accent: var(--ok); }
+  .tier.t1 { --accent: var(--gold); }
+  .tier.t2 { --accent: var(--warn); }
+  .tier .price { font-size: 1.35rem; font-weight: 700; margin: 2px 0 0; }
+  .tier .price small { font-size: .85rem; font-weight: 500; color: var(--muted); }
+  .tier .start { color: var(--muted); font-size: .88rem; margin: 2px 0 10px; }
+  .tier ul { list-style: none; padding: 0; font-size: .9rem; }
+  .tier li { padding: 6px 0; border-top: 1px solid var(--line); }
+  .tier li .t { font-weight: 600; }
+  .rule-box { margin-top: 14px; padding: 10px 14px; border-radius: var(--radius); background: var(--no-bg); color: var(--no); font-weight: 600; }
+
+  /* 7 roadmap */
+  .phase { --accent: var(--gold); }
+  .phase .days { font-size: .85rem; font-weight: 700; color: var(--gold); }
+  .phase h3 { margin: 0 0 8px; }
+  .phase h4 { margin: 10px 0 4px; font-size: .9rem; color: var(--muted); }
+  .kpi { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .kpi td { padding: 4px 0; border-top: 1px solid var(--line); vertical-align: top; }
+  .kpi td:last-child { text-align: right; font-weight: 700; padding-left: 10px; white-space: nowrap; }
+  .kpi .note { display: block; font-weight: 400; color: var(--muted); font-size: .8rem; white-space: normal; }
+
+  /* 8 rule6 */
+  .articles { list-style: none; padding: 0; display: grid; gap: 8px; }
+  .articles li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin: 0; }
+  .articles .an { font-weight: 700; color: var(--gold); }
+  .articles .sig { display: block; margin-top: 4px; font-size: .85rem; color: var(--muted); }
+  .forbid { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .notdone { --accent: var(--silver); }
+
+  /* 9 questions */
+  #questions .qwrap { background: var(--gold-bg); border: 2px solid var(--gold); border-radius: calc(var(--radius) + 4px); padding: 16px; }
+  .qlist { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .q { background: var(--surface); border-radius: var(--radius); padding: 12px 14px; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; box-shadow: var(--shadow); margin: 0; }
+  .q .qid { font-weight: 700; font-size: 1.15rem; color: var(--gold); }
+  .q .qtext { font-weight: 600; font-size: 1.02rem; }
+  .q .def { margin-top: 4px; font-size: .88rem; color: var(--muted); }
+  .q .def b { color: var(--text); font-weight: 600; }
+  .q .tag { margin-top: 6px; }
+  @media (max-width: 420px) { .q { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+
+  /* 10 sources */
+  .sources { list-style: none; padding: 0; display: grid; gap: 6px; font-size: .9rem; }
+  .sources li { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 8px; margin: 0; scroll-margin-top: 12px; }
+  .sources li:target { background: var(--gold-bg); border-radius: 8px; }
+  .sources .sid { font-weight: 700; color: var(--gold); font-family: "IBM Plex Mono", monospace; font-size: .85rem; padding-top: 2px; }
+
+  footer { margin: 40px 0 0; padding: 22px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; text-align: center; }
+  footer p { margin: 4px 0; }
+  .err { margin: 40px 0; padding: 16px; border-radius: var(--radius); background: var(--no-bg); color: var(--no); }
+  noscript p { padding: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top" id="top">
+    <p class="eyebrow" id="eyebrow">กำลังโหลดแผน…</p>
+    <h1 id="title">แผนทีม Marketing</h1>
+    <div class="badges" id="badges"></div>
+    <nav class="toc" aria-label="สารบัญ">
+      <a href="#summary">1 สรุป</a><a href="#options">2 ทางเลือก</a><a href="#team">3 ทีม</a><a href="#channels">4 ช่องทาง</a>
+      <a href="#pipeline">5 Pipeline</a><a href="#tools">6 เครื่องมือ</a><a href="#roadmap">7 Roadmap</a><a href="#rule6">8 Rule 6</a>
+      <a href="#questions">9 คำถามถึงเปรม</a><a href="#sources">10 แหล่งอ้างอิง</a>
+    </nav>
+  </header>
+  <noscript><p>หน้านี้ต้องเปิด JavaScript เพื่ออ่านข้อมูลแผนจาก <a href="data/marketing-team-plan.json">data/marketing-team-plan.json</a></p></noscript>
+  <main id="app"></main>
+  <footer>
+    <p>🤖 แผนโดย Beam Oracle · เว็บโดย Tide/Swell/Shore จาก [เปรม] → sukistudio/marketing-plan</p>
+    <p>ข้อเสนอจาก AI — รอเปรมเคาะ</p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+  const DATA_URL = "data/marketing-team-plan.json";
+
+  // ---------- helpers ----------
+  const esc = (v) => String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const arr = (v) => (v == null ? [] : Array.isArray(v) ? v : [v]);
+  const num = (n) => (typeof n === "number" ? n.toLocaleString("th-TH") : esc(n));
+  const range = (r) => (Array.isArray(r) ? (r[0] === r[1] ? num(r[0]) : `${num(r[0])}–${num(r[1])}`) : num(r));
+  // ข้อความ: escape แล้วเปลี่ยน [S6] / [S2a] เป็นลิงก์ไปแหล่งอ้างอิง
+  const txt = (v) => esc(v).replace(/\[(S\d+[a-z]?)\]/g, (_, id) => `<a class="src" href="#src-${id}">[${id}]</a>`);
+  const srcLink = (ids) => arr(ids).map((id) => `<a class="src" href="#src-${esc(id)}">[${esc(id)}]</a>`).join(" ");
+  const list = (items, cls = "") => (arr(items).length ? `<ul class="${cls}">${arr(items).map((i) => `<li>${txt(i)}</li>`).join("")}</ul>` : `<span class="muted">—</span>`);
+  const section = (id, n, title, note, body) =>
+    `<section id="${id}" aria-labelledby="${id}-h"><h2 id="${id}-h"><span class="n">${n}</span>${title}</h2>${note ? `<p class="section-note">${note}</p>` : ""}${body}</section>`;
+
+  // ---------- sections ----------
+  function header(d) {
+    const m = d.meta;
+    document.title = m.title.replace(/\s*—.*$/, "");
+    document.getElementById("eyebrow").innerHTML = `${esc(m.author.emoji)} เขียนโดย ${esc(m.author.oracle)} (AI · ${esc(m.author.session)}) · สำหรับ ${esc(m.for)}`;
+    document.getElementById("title").textContent = m.title;
+    document.getElementById("badges").innerHTML =
+      `<span class="pill gold">สถานะ: ${esc(m.status)} <small>· ${esc(m.statusNote)}</small></span>` +
+      `<span class="pill">ข้อมูล ณ ${esc(m.date)} <small>· v${esc(m.version)}</small></span>`;
+  }
+
+  function summary(d) {
+    const s = d.summary;
+    const rows = [["ทำการตลาดให้อะไร", s.what_to_market], ["ช่องทาง", s.channels], ["ใครกดโพสต์", s.who_posts], ["งบ", s.budget], ["ทีม", s.team]];
+    return section("summary", "1", "สรุปหน้าเดียว", "",
+      `<div class="card summary">${rows.map(([k, v]) => `<div class="row"><div class="k">${k}</div><div>${txt(v)}</div></div>`).join("")}</div>`);
+  }
+
+  function options(d) {
+    const cards = d.options.map((o) => `
+      <article class="card opt${o.recommended ? " rec" : ""}">
+        <div class="head"><div class="letter">${esc(o.id)}</div><div class="name">${txt(o.name)}</div></div>
+        <div class="meta">${o.recommended ? `<span class="tag t-gold">⭐ Beam แนะนำ</span>` : ""}<span class="tag t-silver">${esc(o.role)}</span></div>
+        <p style="margin:0">${txt(o.description)}</p>
+        <div class="pros"><h4>ข้อดี</h4>${list(o.pros)}</div>
+        <div class="cons"><h4>ข้อเสีย</h4>${list(o.cons)}</div>
+        <div><h4>สิ่งที่ต้องมี</h4>${list(o.requirements)}</div>
+      </article>`).join("");
+    const r = d.recommendation;
+    return section("options", "2", "ทางเลือก A / B / C", "ทำการตลาดให้อะไร — ยังไม่สมมติสินค้า Beam เสนอ 3 ทางให้เปรมเคาะ",
+      `<div class="grid g3">${cards}</div>
+       <div class="reco"><p class="big">⭐ Beam แนะนำ: ${txt(r.text)}</p><p><b>เหตุผล:</b> ${txt(r.reason)}</p><p><b>ข้อควรรู้:</b> ${txt(r.caveat)}</p></div>`);
+  }
+
+  function team(d) {
+    const t = d.team;
+    const by = Object.fromEntries(t.members.map((m) => [m.session, m]));
+    const node = (m, cls) => {
+      if (!m) return "";
+      const status = m.status === "active" ? `<span class="tag t-ok">ทำงานอยู่</span>` : `<span class="tag t-silver">วางแผนไว้</span>`;
+      const when = m.opened ? ["เปิดเมื่อ", m.opened] : m.open_when ? ["เปิดเมื่อ", m.open_when] : null;
+      const rows = [
+        ["session", `<code>${esc(m.session)}</code>`],
+        ["รายงาน", esc(m.reports_to)],
+        ["model", esc(m.model) + (m.model_reason ? ` <span class="muted">— ${esc(m.model_reason)}</span>` : "")],
+        ["phase", esc(m.phase)],
+        when && [when[0], txt(when[1])],
+      ].filter(Boolean);
+      return `<article class="card node ${cls}${m.status !== "active" ? " planned" : ""}">
+        <div class="who"><span class="emo">${esc(m.emoji)}</span>${esc(m.oracle)}${status}</div>
+        <p class="role">${txt(m.role)}</p>
+        <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+      </article>`;
+    };
+    const h = t.hierarchy; // ["เปรม", "10-monday", "12-beam", [kids]]
+    const kids = arr(h[3]).map((s) => node(by[s], "kid")).join("");
+    const sib = t.sibling_team;
+    const chart = `
+      <div class="org">
+        <article class="card node human"><div class="who"><span class="emo">👤</span>${esc(h[0])}<span class="tag t-gold">มนุษย์ · ผู้เคาะ</span></div></article>
+        <div class="vline"></div>
+        ${node(by[h[1]], "moon")}
+        <div class="split2">
+          <div class="branch">
+            ${node(by[h[2]], "beam")}
+            <div class="kids">${kids}</div>
+          </div>
+          <div class="branch sib">
+            <p class="peer-label">ทีมพี่น้อง</p>
+            <div class="sibling"><div class="who">${esc(sib.emoji)} ${esc(sib.oracle)} <code>${esc(sib.session)}</code></div><div class="small muted">${txt(sib.role)}</div></div>
+          </div>
+        </div>
+      </div>`;
+    return section("team", "3", "โครงทีม", "เส้นทึบ = ทำงานอยู่ · กรอบประ = วางแผนไว้ (bud เมื่อมีงานรอ)",
+      chart + `<div class="card rules" style="--accent:var(--silver)"><h3>กติกาทีม</h3>${list(t.rules)}</div>`);
+  }
+
+  function channels(d) {
+    const c = d.thailand_context;
+    const pr = c.platform_reach_m;
+    const label = { facebook: "Facebook", youtube: "YouTube", tiktok_adults18plus: "TikTok (18+)", instagram: "Instagram", line_mau: "LINE (MAU)", x: "X", messenger: "Messenger", linkedin_registered: "LinkedIn (registered)" };
+    const ctx = `<div class="ctx">
+        <span class="pill">ประชากร <b>${num(c.population_m)}</b> ล้าน</span>
+        <span class="pill">อินเทอร์เน็ต <b>${num(c.internet_users_m)}</b> ล้าน (${num(c.internet_pct)}%)</span>
+        <span class="pill">โซเชียล <b>${num(c.social_identities_m)}</b> ล้าน (${num(c.social_pct)}%)</span>
+        ${Object.entries(pr).map(([k, v]) => `<span class="pill">${esc(label[k] || k)} <b>${num(v)}</b> ล้าน</span>`).join("")}
+      </div><p class="section-note small">ไทย ณ ${esc(c.reference_date)} ${srcLink(c.source)} · ${txt(c.note)}</p>`;
+    const post = (v) => (v === true ? `<span class="tag t-ok">ทีมโพสต์เองได้</span>` : v === "partial" ? `<span class="tag t-warn">โพสต์เองได้บางส่วน</span>` : `<span class="tag t-no">ทีมไม่โพสต์เอง</span>`);
+    const day = (n) => (n == null ? `<span class="tag">ตามโอกาส</span>` : `<span class="tag t-gold">เปิดวันที่ ${num(n)}</span>`);
+    const cards = d.channels.map((ch) => {
+      const rows = [
+        ["บทบาท", txt(ch.funnel_th)],
+        ["รูปแบบ", list(ch.formats)],
+        ["ความถี่", txt(ch.frequency)],
+        ["ขอจากเปรม", arr(ch.ask_prem).length ? list(ch.ask_prem) : `<span class="muted">—</span>`],
+        ["โพสต์", post(ch.team_can_post) + (ch.team_post_note ? ` <span class="small">${txt(ch.team_post_note)}</span>` : "")],
+        ch.api && ["API", `${ch.api.available === true ? "มี" : ch.api.available === "limited" ? "จำกัด" : ch.api.available === "paid" ? "เสียเงิน" : esc(ch.api.available)} · ${txt(ch.api.limits)} ${srcLink(ch.api.source)}`],
+        ch.pricing_thb && ["ราคา", (() => {
+          const p = ch.pricing_thb;
+          return `ฟรี ${num(p.free.monthly)} บ. (${num(p.free.messages)} ข้อความ) · Basic ${num(p.basic.monthly)} บ. (${num(p.basic.messages)}) · Pro ${num(p.pro.monthly)} บ. (${num(p.pro.messages)}) · ยังไม่รวม VAT ${num(p.vat_excluded_pct)}% ${srcLink(p.source)}`;
+        })()],
+        ch.signature && ["ลงชื่อ", txt(ch.signature)],
+        ch.depends_on && ["ขึ้นกับ", `<code>${esc(ch.depends_on)}</code>`],
+      ].filter(Boolean);
+      const dcls = ch.open_day == null ? "dnone" : ch.open_day <= 30 ? "d30" : ch.open_day <= 60 ? "d60" : "d90";
+      return `<article class="card ch ${dcls}">
+        <div class="head"><span class="name">${esc(ch.name)}</span>${day(ch.open_day)}</div>
+        <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+      </article>`;
+    }).join("");
+    return section("channels", "4", "ช่องทาง", "เปิดทีละชุด: วันที่ 30 / 60 / 90 นับจากเปรมเคาะ",
+      ctx + `<div class="grid g2">${cards}</div><div class="cascade"><b>1 ต้นฉบับ → หลายช่อง:</b> ${txt(d.content_cascade)}</div>`);
+  }
+
+  function pipeline(d) {
+    const p = d.pipeline;
+    const owner = (o) => arr(o).map((x) => `<code>${esc(x)}</code>`).join(" + ");
+    const steps = p.steps.map((s) => `
+      <li class="step${s.gate ? " gate" : ""}">
+        <div class="num">${esc(s.n)}</div>
+        <div class="body">
+          <div class="title">${esc(s.name)} <span class="owner">· ${owner(s.owner)}</span>${s.gate ? `<span class="gate-label">ด่าน: ${txt(s.gate)}</span>` : ""}</div>
+          ${s.output ? `<p>${txt(s.output)}</p>` : ""}
+          ${s.checks ? `<p><span class="muted">ตรวจ:</span> ${s.checks.map(esc).join(" · ")}</p>` : ""}
+          ${s.note ? `<p class="muted">${txt(s.note)}</p>` : ""}
+        </div>
+      </li>`).join("");
+    const flow = p.content_status_flow.map((x) => `<span class="tag t-silver">${esc(x)}</span>`).join(" → ");
+    const rc = p.reporting_contract;
+    return section("pipeline", "5", "Pipeline ของงาน", "กรอบทอง = ด่านที่เปรมต้อง approve",
+      `<ol class="pipe">${steps}</ol>
+       <div class="flow-status"><span class="muted">สถานะคอนเทนต์:</span> ${flow}</div>
+       <p class="small muted">รายงาน: PROGRESS ${txt(rc.PROGRESS)} · STUCK ${txt(rc.STUCK)} · DONE ${txt(rc.DONE)} · ช่อง <code>${esc(rc.channel)}</code></p>`);
+  }
+
+  function tools(d) {
+    const t = d.tools;
+    const t0 = `<article class="card tier t0"><h3>ชั้น 0 · ฟรี</h3><p class="price">${num(t.tier0_free.monthly_thb)} <small>บาท/เดือน</small></p><p class="start">เริ่ม: ${txt(t.tier0_free.start)}</p>
+      <ul>${t.tier0_free.items.map((i) => `<li><span class="t">${txt(i.need)}:</span> ${txt(i.tool)}${i.note ? ` <span class="muted">— ${txt(i.note)}</span>` : ""} ${srcLink(i.source)}</li>`).join("")}</ul></article>`;
+    const t1 = `<article class="card tier t1"><h3>ชั้น 1 · เบา</h3><p class="price">≈ ${range(t.tier1_light.monthly_thb_range)} <small>บาท/เดือน</small></p><p class="start">เริ่ม: ${txt(t.tier1_light.start)}</p>
+      <ul>${t.tier1_light.items.map((i) => `<li><span class="t">${txt(i.name)}</span> ≈ ${range(i.thb_est)} บ. <span class="muted">(${txt(i.ref_price)})</span> ${srcLink(i.source)}<br><span class="small muted">${txt(i.why)}</span></li>`).join("")}</ul></article>`;
+    const t2 = `<article class="card tier t2"><h3>ชั้น 2 · Ads + หนัก</h3><p class="price">≈ ${range(t.tier2_ads.monthly_thb_range)} <small>บาท/เดือน</small></p><p class="start">เริ่ม: ${txt(t.tier2_ads.start)}</p>
+      <ul>${t.tier2_ads.items.map((i) => `<li><span class="t">${txt(i.name)}</span>${i.thb_cpm_est ? ` · CPM ≈ ${range(i.thb_cpm_est)} บ.` : ""}${i.ref ? `<br><span class="small">${txt(i.ref)}</span>` : ""} ${srcLink(i.sources || i.source)}${i.note ? `<br><span class="small muted">${txt(i.note)}</span>` : ""}</li>`).join("")}</ul></article>`;
+    const fx = d.meta.fx_assumption;
+    return section("tools", "6", "เครื่องมือ 3 ชั้น", `บาท/เดือน · อัตรา ${num(fx.thb_per_usd)} บาท/USD ${srcLink(fx.source)} — ${txt(fx.note)}`,
+      `<div class="grid g3">${t0}${t1}${t2}</div><div class="rule-box">🔒 ${txt(t.rule)}</div>`);
+  }
+
+  function roadmap(d) {
+    const r = d.roadmap;
+    const phases = r.phases.map((p) => `
+      <article class="card phase">
+        <div class="days">วันที่ ${num(p.days[0])}–${num(p.days[1])}</div>
+        <h3>${esc(p.name)}</h3>
+        <h4>ทำอะไร</h4>${list(p.actions)}
+        <h4>KPI</h4>
+        <table class="kpi"><tbody>${p.kpis.map((k) => `<tr><td>${txt(k.metric)}</td><td>${num(k.target)}${k.note ? `<span class="note">${txt(k.note)}</span>` : ""}</td></tr>`).join("")}</tbody></table>
+      </article>`).join("");
+    return section("roadmap", "7", "Roadmap 90 วัน + KPI", `${txt(r.start_condition)} · ${txt(r.kpi_note)}`,
+      `<div class="grid g3">${phases}</div><p class="small muted" style="margin-top:12px">ทุกสัปดาห์: ${txt(r.weekly_ritual)}</p>`);
+  }
+
+  function rule6(d) {
+    const p = d.rule6_policy;
+    const arts = p.articles.map((a) => `<li><span class="an">${esc(a.n)}</span><div>${txt(a.text)}
+        ${a.signature_full ? `<span class="sig">ลายเซ็นเต็ม: <code>${esc(a.signature_full)}</code> · สั้น: <code>${esc(a.signature_short)}</code>${a.note ? ` · ${txt(a.note)}` : ""}</span>` : ""}
+        ${a.forbidden ? `<div class="forbid">${a.forbidden.map((f) => `<span class="tag t-no">✕ ${esc(f)}</span>`).join("")}</div>` : ""}
+      </div></li>`).join("");
+    return section("rule6", "8", "Rule 6 + สิ่งที่ตั้งใจไม่ทำ", txt(p.principle),
+      `<div class="grid g2" style="align-items:start">
+         <div><ol class="articles">${arts}</ol></div>
+         <article class="card notdone"><h3>สิ่งที่ Beam ตั้งใจไม่ทำ</h3>${list(d.deliberately_not_done)}</article>
+       </div>`);
+  }
+
+  function questions(d) {
+    const qs = d.questions_for_prem.map((q) => `
+      <li class="q">
+        <div class="qid">${esc(q.id)}</div>
+        <div>
+          <div class="qtext">${txt(q.question)}</div>
+          <div class="def"><b>ถ้าไม่ตอบ:</b> ${txt(q.default_if_unanswered)}</div>
+          <span class="tag ${q.priority === 1 ? "t-gold" : "t-silver"}">ลำดับความสำคัญ ${esc(q.priority)}</span>
+        </div>
+      </li>`).join("");
+    return section("questions", "9", `คำถามถึงเปรม · ${d.questions_for_prem.length} ข้อ`, "เปรมตอบผ่านแชทได้เลย — ไม่ต้องกรอกฟอร์ม · ข้อที่ไม่ตอบ Beam จะใช้ค่าเริ่มต้นที่เขียนไว้",
+      `<div class="qwrap"><ol class="qlist">${qs}</ol></div>`);
+  }
+
+  function sources(d) {
+    const items = Object.entries(d.sources).map(([id, s]) => `
+      <li id="src-${esc(id)}"><span class="sid">${esc(id)}</span><div>
+        <a href="${esc(s.url)}" rel="noopener noreferrer" target="_blank">${esc(s.title)}</a>
+        ${s.url2 ? ` · <a href="${esc(s.url2)}" rel="noopener noreferrer" target="_blank">ลิงก์ 2</a>` : ""}
+        ${s.fetched ? ` <span class="muted small">(ดึง ${esc(s.fetched)})</span>` : ""}
+        ${s.note ? `<div class="small muted">${txt(s.note)}</div>` : ""}
+      </div></li>`).join("");
+    const m = d.meta;
+    return section("sources", "10", "แหล่งอ้างอิง", `ข้อมูล ณ ${esc(m.date)} · แผน v${esc(m.version)} · ${esc(m.signature)}`,
+      `<ol class="sources">${items}</ol>`);
+  }
+
+  // ---------- boot ----------
+  fetch(DATA_URL, { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then((d) => {
+      header(d);
+      document.getElementById("app").innerHTML = [summary, options, team, channels, pipeline, tools, roadmap, rule6, questions, sources].map((f) => f(d)).join("");
+      if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+    })
+    .catch((e) => {
+      document.getElementById("eyebrow").textContent = "";
+      document.getElementById("app").innerHTML = `<div class="err">โหลดข้อมูลแผนไม่สำเร็จ (${esc(e.message)}) — ไฟล์ <code>${DATA_URL}</code></div>`;
+    });
+})();
+</script>
+</body>
+</html>
