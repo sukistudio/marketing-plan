@@ -1,0 +1,1014 @@
+{
+  "meta": {
+    "title": "แผนทีม Marketing 🌕 (ทีม 12x ใต้ Monday) — ฉบับเสนอเปรม",
+    "version": "1.1.0",
+    "date": "2026-10-11",
+    "author": {
+      "oracle": "Beam Oracle",
+      "emoji": "🌕",
+      "session": "12-beam",
+      "ai": true
+    },
+    "for": "เปรม (ผ่าน Monday)",
+    "status": "decided",
+    "statusNote": "เปรมเคาะทางเลือก A — 2026-10-11 · Q1 ไม่มีสินค้านอก GitHub · Q2–Q9 ใช้ default",
+    "source_md": "plan/2026-10_marketing-team-plan.public.md",
+    "language": "th",
+    "fx_assumption": {
+      "thb_per_usd": 33.7,
+      "source": "S2c",
+      "note": "ตัวเลขบาทที่แปลงจากดอลลาร์เป็นค่าประมาณของ Beam"
+    },
+    "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
+    "visibility": "public",
+    "public_note": "ฉบับ public v3: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
+    "decision": {
+      "option": "A",
+      "label": "A — เคาะ 2026-10-11",
+      "decided_by": "เปรม",
+      "date": "2026-10-11",
+      "via": "Monday (10-monday)",
+      "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
+      "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
+      "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
+    }
+  },
+  "summary": {
+    "what_to_market": "ยังไม่สมมติ — เสนอ 3 ทางเลือก · Beam แนะนำ A เป็นแกน + C ชั้นรอง (80/20) · B รอ A พิสูจน์ 90 วัน",
+    "channels": "ทุกช่อง แต่เปิดทีละชุด: 30 วัน YouTube+TikTok+Facebook · 60 วัน +Instagram+LINE OA · 90 วัน +เว็บ/SEO+อีเมล · X/Threads ตามโอกาส",
+    "who_posts": "ช่วงแรกเปรมกดเองจาก draft ของทีม (ไม่ติดป้าย) → ปลดให้ทีมโพสต์เองทีละช่องเมื่อไว้ใจ (ลงชื่อ 🤖 ทุกโพสต์)",
+    "budget": "ชั้น 0 ฟรี 0 บาท/เดือน เริ่มทันที · ชั้น 1 ≈ 2,500–4,500 บาท/เดือน · ชั้น 2 ads ≈ 10,000–30,000 บาท/เดือน · ทุกชั้นเปรมเคาะ",
+    "team": "Beam คนเดียวจนแผนผ่าน → bud Glow + Pulse ตอน sprint แรก → Prism เมื่อมีงานภาพจริง"
+  },
+  "existing_assets": [
+    {
+      "name": "map-story",
+      "emoji": "🗺️",
+      "type": "tool",
+      "visibility": "private",
+      "status": "Phase 1 POC merged — ลูกโลกหมุน → zoom ประเทศ → ปฏิทินไทย · 5 วิ · 16:9 + 9:16 · render ~30 วิ · ไม่มี API เสียเงิน",
+      "marketing_use": "เครื่องผลิตคอนเทนต์พร้อมใช้ที่สุด",
+      "usable": true
+    },
+    {
+      "name": "software-team-chart",
+      "type": "web",
+      "visibility": "public",
+      "url": "https://software-team-chart.vercel.app",
+      "status": "live on Vercel",
+      "marketing_use": "หลักฐาน 'สตูดิโอที่รันด้วยทีม AI'",
+      "usable": true
+    },
+    {
+      "name": "ระบบภายใน (private) 5 รายการ",
+      "type": "internal",
+      "visibility": "private",
+      "status": "ใช้เอง/ทดลอง — Beam อ่านเฉพาะ README",
+      "marketing_use": "ยังไม่ใช่สินค้า",
+      "usable": false
+    },
+    {
+      "name": "สินค้า/บริการนอก GitHub",
+      "type": "unknown",
+      "status": "Beam ไม่ทราบ",
+      "marketing_use": "ต้องถามเปรม (Q1)",
+      "usable": null
+    }
+  ],
+  "options": [
+    {
+      "id": "A",
+      "name": "ช่อง \"เล่าเรื่องด้วยแผนที่\" (YouTube/Shorts + TikTok) ใช้ map-story เป็นเครื่องผลิต",
+      "recommended": true,
+      "role": "แกน (~80%) · ✅ เปรมเคาะ 2026-10-11",
+      "description": "ช่องคอนเทนต์ก่อนมีสินค้า: คลิปสั้น 15–60 วิ เรื่องเล่าบนแผนที่ (ประวัติศาสตร์ · ภูมิศาสตร์ · ท่องเที่ยว · ข่าวโลก · ข้อมูลเปรียบเทียบประเทศ) ไทยก่อน อังกฤษตาม",
+      "pros": [
+        "ใช้ของที่มีจริง ไม่ต้องรอสินค้า · format 9:16 พร้อม",
+        "ทีม Software เป็น supply ภายใน — Marketing เป็นลูกค้าคนแรกของ map-story",
+        "วิดีโอแผนที่เป็นแนวที่คนดูเยอะ ไทยยังทำน้อย (ข้อสังเกต — Pulse จะยืนยันด้วยตัวเลข)",
+        "เปิดทางหารายได้ทีหลัง: YouTube Partner · สปอนเซอร์ · ขาย template/บริการ (= B)"
+      ],
+      "cons": [
+        "รายได้ช้า — YPP ต้อง 1,000 subs + 4,000 ชม./12 เดือน หรือ 10M Shorts views/90 วัน [S6]",
+        "ต้องมีเสียง/พากย์/ดนตรี ซึ่ง map-story ยังไม่มี",
+        "ต้องตัดสิน niche ให้แคบ · คอนเทนต์ข้อเท็จจริงต้อง QA แหล่งทุกคลิป"
+      ],
+      "requirements": [
+        "ชื่อช่อง + แบรนด์ (Q2)",
+        "niche ที่เปรมสนใจ (Q3)",
+        "บัญชี YouTube + TikTok",
+        "map-story Phase 2 (หลายฉาก, เส้นทาง, ข้อความซ้อน, เสียง) — ขอผ่าน Monday → Tide",
+        "brand kit (Sarabun มีแล้ว)"
+      ],
+      "decided": true
+    },
+    {
+      "id": "B",
+      "name": "map-story เป็นบริการ/ผลิตภัณฑ์ (รับทำคลิปแผนที่ / ขาย template / open-core)",
+      "recommended": false,
+      "role": "รอผล A 90 วัน",
+      "description": "ขาย map-story ตรง: บริการรับทำคลิปแผนที่ให้สื่อ ครีเอเตอร์ ครู ท่องเที่ยว · หรือ open-source แล้วขาย template/style/บริการ render",
+      "pros": [
+        "สินค้าชัด ลูกค้าจ่ายได้จริง (B2B)",
+        "ใช้ portfolio จาก A เป็นตัวอย่างงาน"
+      ],
+      "cons": [
+        "README ระบุ 'สำหรับใช้เอง ไม่มีระบบสมาชิก/จ่ายเงิน' → ต้องเปลี่ยนทิศ product (เรื่องของเปรม + ทีม Software)",
+        "ยังไม่มี portfolio",
+        "B2B ต้องมีคนคุยลูกค้า (เปรม)"
+      ],
+      "requirements": [
+        "เปรมเคาะว่า map-story เป็น product ไหม (Q4)",
+        "ราคา",
+        "ตัวอย่างงาน 5–10 ชิ้น (จาก A)",
+        "landing page + ช่องติดต่อ (LINE OA / อีเมล)"
+      ],
+      "decided": false
+    },
+    {
+      "id": "C",
+      "name": "แบรนด์สตูดิโอ \"ทีม AI ที่ซื่อสัตย์\" (build in public)",
+      "recommended": true,
+      "role": "ชั้นรอง (~20%)",
+      "description": "เล่าวิธีที่เปรมรันสตูดิโอด้วยทีม Oracle — ผังทีม วงจรงาน Rule 6 บทเรียนจริง · ทุกอย่างที่ทีมสร้างกลายเป็นวัตถุดิบ",
+      "pros": [
+        "ไม่ต้องรอสินค้า",
+        "แตกต่าง — ทีม AI ที่ประกาศตัวว่าเป็น AI (Rule 6) คือจุดขาย",
+        "สร้าง audience สำหรับบริการให้คำปรึกษา/คอร์ส/เครื่องมือในอนาคต"
+      ],
+      "cons": [
+        "ขายอะไรยังไม่ชัด",
+        "เปรมต้องยอมเป็นหน้าแบรนด์บางส่วน (Q5)",
+        "เสี่ยงเปิดเผยข้อมูลภายใน — ต้องมี redaction checklist",
+        "กลุ่มคนดูเล็กกว่า A"
+      ],
+      "requirements": [
+        "เปรมตกลงว่าเปิดเผยอะไรได้/ไม่ได้",
+        "ชื่อแบรนด์สตูดิโอ (Q2)"
+      ],
+      "decided": false
+    }
+  ],
+  "recommendation": {
+    "text": "A เป็นแกน + C ชั้นรอง ~80/20 · B รอผลจาก A 90 วัน",
+    "reason": "A ใช้ของที่มีจริง ไม่ต้องตัดสินเรื่อง product ก่อน และผลงานจาก A เป็น portfolio ให้ B อัตโนมัติ",
+    "caveat": "ถ้าเปรมมีสินค้า/บริการจริงนอก GitHub (Q1) แผนทั้งหมดต้องปรับ — Beam เขียน v2 ภายใน 1 วันหลังได้คำตอบ",
+    "outcome": "เปรมเคาะ A — 2026-10-11 (ผ่าน Monday) · C ชั้นรองยังเป็นข้อเสนอ · B รอ 90 วัน"
+  },
+  "team": {
+    "hierarchy": [
+      "เปรม",
+      "10-monday",
+      "12-beam",
+      [
+        "121-glow",
+        "122-prism",
+        "123-pulse"
+      ]
+    ],
+    "sibling_team": {
+      "session": "11-tide",
+      "oracle": "Tide",
+      "emoji": "🌊",
+      "role": "ทีม Software — สร้างของ (map-story, เว็บ)"
+    },
+    "members": [
+      {
+        "session": "10-monday",
+        "oracle": "Monday",
+        "emoji": "🌙🐾",
+        "role": "parent — ตัวแทนเปรม ส่ง Marketing Brief · รายงานเปรม 3 บรรทัด",
+        "reports_to": "เปรม",
+        "model": "Fable 5.1",
+        "repo": "sukistudio/monday-oracle",
+        "phase": 0,
+        "status": "active"
+      },
+      {
+        "session": "12-beam",
+        "oracle": "Beam",
+        "emoji": "🌕",
+        "role": "lead — brief → strategy → calendar → assign → review+merge → ส่งเปรม approve → วัดผล → รายงาน",
+        "reports_to": "10-monday",
+        "model": "Fable 5.1 → Opus 5.5",
+        "repo": "sukistudio/beam-oracle",
+        "phase": 1,
+        "status": "active",
+        "opened": "2026-10-11"
+      },
+      {
+        "session": "121-glow",
+        "oracle": "Glow",
+        "emoji": "✨",
+        "role": "Content/Copy — โพสต์ บทคลิป caption SEO อีเมล (ไทย+อังกฤษ)",
+        "reports_to": "12-beam",
+        "model": "Opus 5.5",
+        "model_reason": "งานเขียนไทยเป็นหน้าตาแบรนด์",
+        "repo": "sukistudio/glow-oracle",
+        "phase": 2,
+        "status": "planned",
+        "open_when": "content sprint แรก (หลังเปรมเคาะข้อ 1)"
+      },
+      {
+        "session": "123-pulse",
+        "oracle": "Pulse",
+        "emoji": "💓",
+        "role": "Research/Analytics/QA — วิจัยตลาด-คู่แข่ง · วัดผล · ตรวจ fact/เสียงแบรนด์/Rule 6 ก่อนปล่อย",
+        "reports_to": "12-beam",
+        "model": "Sonnet 5.5",
+        "model_reason": "ทำตาม checklist ดึงตัวเลข",
+        "repo": "sukistudio/pulse-oracle",
+        "phase": 2,
+        "status": "planned",
+        "open_when": "พร้อม Glow — QA ต้องมีตั้งแต่โพสต์แรก"
+      },
+      {
+        "session": "122-prism",
+        "oracle": "Prism",
+        "emoji": "🔷",
+        "role": "Creative/Visual — thumbnail social card storyboard · brief วิดีโอให้ map-story",
+        "reports_to": "12-beam",
+        "model": "Sonnet 5.5 → Opus เมื่อคิด concept",
+        "repo": "sukistudio/prism-oracle",
+        "phase": 3,
+        "status": "planned",
+        "open_when": "เมื่อมีงานภาพจริง"
+      }
+    ],
+    "rules": [
+      "ไม่ bud ล่วงหน้า — ทุก oracle ที่เกิดต้องมีงานรอ",
+      "ลูกทีมรายงาน Beam เท่านั้น · Beam รายงาน Monday เท่านั้น",
+      "ไม่คุยกับ Ripple/Shore ตรง — งานเว็บ/วิดีโอขอผ่าน Monday → Tide",
+      "ทุก oracle รัน bypass permissions (เปรมเคาะ 2026-10-11)",
+      "ลูกทีมมี worktree ของตัวเองใน repo ภายในของทีม Marketing (private)"
+    ],
+    "repo": {
+      "name": "repo ภายในของทีม Marketing (private)",
+      "visibility": "private"
+    }
+  },
+  "thailand_context": {
+    "source": "S1",
+    "reference_date": "2025-10",
+    "population_m": 71.6,
+    "internet_users_m": 67.8,
+    "internet_pct": 94.7,
+    "social_identities_m": 56.6,
+    "social_pct": 79.1,
+    "platform_reach_m": {
+      "facebook": 51.5,
+      "youtube": 47.2,
+      "tiktok_adults18plus": 56.6,
+      "instagram": 20.6,
+      "line_mau": 56.0,
+      "x": 13.3,
+      "messenger": 36.5,
+      "linkedin_registered": 6.5
+    },
+    "note": "ad reach ≠ ผู้ใช้จริง · LINE เป็น MAU · LinkedIn เป็น registered"
+  },
+  "channels": [
+    {
+      "id": "youtube",
+      "name": "YouTube (Shorts + คลิปยาว)",
+      "funnel": [
+        "awareness",
+        "interest"
+      ],
+      "funnel_th": "รู้จัก → สนใจ (ค้นหาได้ อยู่นาน)",
+      "formats": [
+        "Shorts 9:16 จาก map-story",
+        "คลิปยาว 3–8 นาที (ภายหลัง)"
+      ],
+      "frequency": "Shorts 3/สัปดาห์ · ยาว 1/2 สัปดาห์",
+      "ask_prem": [
+        "สร้างช่อง (Brand Account)",
+        "ให้ทีมเป็น Manager",
+        "เปิด YouTube Data API"
+      ],
+      "api": {
+        "available": true,
+        "limits": "10,000 units/วัน · upload 1,600 units",
+        "source": "S7"
+      },
+      "team_can_post": true,
+      "team_post_note": "ผ่าน Studio/API",
+      "signature": "🤖 ผลิตโดย Beam/Glow จาก [เปรม] → repo ภายในของทีม Marketing (private) (ใน description)",
+      "open_day": 30
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "funnel": [
+        "awareness"
+      ],
+      "funnel_th": "รู้จัก (reach สูงสุดในไทย)",
+      "formats": [
+        "คลิปเดียวกับ Shorts ปรับ hook/caption"
+      ],
+      "frequency": "3–5/สัปดาห์",
+      "ask_prem": [
+        "บัญชี TikTok Business"
+      ],
+      "api": {
+        "available": "limited",
+        "limits": "unaudited client: โพสต์เป็น private · ≤ 5 ผู้ใช้/24 ชม.",
+        "source": "S8"
+      },
+      "team_can_post": "partial",
+      "team_post_note": "ช่วงแรกเปรมกดเอง หรือ scheduler ใน TikTok Studio · API อัตโนมัติต้องรอ audit",
+      "signature": "🤖 ใน caption",
+      "open_day": 30
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook Page",
+      "funnel": [
+        "awareness",
+        "interest",
+        "retention"
+      ],
+      "funnel_th": "รู้จัก → สนใจ → รักษา (35+ อยู่ที่นี่)",
+      "formats": [
+        "Reels",
+        "โพสต์ภาพ/ข้อความ",
+        "แชร์คลิป YouTube"
+      ],
+      "frequency": "4–5/สัปดาห์",
+      "ask_prem": [
+        "สร้าง Page",
+        "Meta Business Suite ให้ทีมเป็น admin/editor",
+        "ต่อ Instagram เข้า Business Suite"
+      ],
+      "api": {
+        "available": true,
+        "limits": "ผ่าน Business Suite scheduler ฟรี / Graph API",
+        "source": "S9"
+      },
+      "team_can_post": true,
+      "signature": "🤖 ท้ายโพสต์",
+      "open_day": 30
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "funnel": [
+        "interest"
+      ],
+      "funnel_th": "สนใจ (ภาพสวย/Reels)",
+      "formats": [
+        "Reels",
+        "carousel แผนที่ 1 ภาพ 1 เรื่อง"
+      ],
+      "frequency": "3/สัปดาห์",
+      "ask_prem": [
+        "บัญชี IG Professional ผูกกับ Page"
+      ],
+      "api": {
+        "available": true,
+        "limits": "50 โพสต์/24 ชม. · สื่อต้องอยู่บน URL สาธารณะ",
+        "source": "S9"
+      },
+      "team_can_post": true,
+      "signature": "🤖 ใน caption",
+      "open_day": 60,
+      "depends_on": "122-prism"
+    },
+    {
+      "id": "line_oa",
+      "name": "LINE OA",
+      "funnel": [
+        "retention",
+        "conversion"
+      ],
+      "funnel_th": "รักษา → ซื้อ (ช่องปิด คุยตรง)",
+      "formats": [
+        "broadcast สรุปรายสัปดาห์",
+        "ตอบแชท",
+        "รับงาน (ถ้า B)"
+      ],
+      "frequency": "1 broadcast/สัปดาห์",
+      "ask_prem": [
+        "เปิด LINE OA",
+        "Messaging API channel"
+      ],
+      "pricing_thb": {
+        "free": {
+          "monthly": 0,
+          "messages": 300
+        },
+        "basic": {
+          "monthly": 1280,
+          "messages": 15000,
+          "overage_per_msg": 0.1
+        },
+        "pro": {
+          "monthly": 1780,
+          "messages": 35000,
+          "overage_per_msg": 0.06
+        },
+        "vat_excluded_pct": 7,
+        "source": "S3"
+      },
+      "team_can_post": true,
+      "team_post_note": "ข้อความอัตโนมัติลงท้าย 🤖 Beam (AI) · เรื่องตัดสินใจ/ราคา → เปรม",
+      "signature": "🤖 Beam (AI)",
+      "open_day": 60
+    },
+    {
+      "id": "web_seo",
+      "name": "เว็บ + SEO",
+      "funnel": [
+        "search",
+        "interest",
+        "contact"
+      ],
+      "funnel_th": "ค้นหา → สนใจ → ติดต่อ (บ้านของแบรนด์)",
+      "formats": [
+        "landing page",
+        "บทความประกอบคลิป (transcript + แผนที่ภาพนิ่ง)"
+      ],
+      "frequency": "1 บทความ/สัปดาห์",
+      "ask_prem": [
+        "โดเมน (Q6)",
+        "Vercel project (Tide สร้าง)",
+        "Google Search Console + GA4"
+      ],
+      "team_can_post": true,
+      "team_post_note": "ผ่าน PR ใน repo → Tide deploy",
+      "signature": "footer 🤖 ตาม Rule 6",
+      "open_day": 90,
+      "depends_on": "11-tide"
+    },
+    {
+      "id": "email",
+      "name": "อีเมล",
+      "funnel": [
+        "retention"
+      ],
+      "funnel_th": "รักษา (ของเราเอง ไม่ขึ้นกับ platform)",
+      "formats": [
+        "จดหมายข่าวรายเดือน"
+      ],
+      "frequency": "1/เดือน",
+      "ask_prem": [
+        "บัญชีผู้ให้บริการอีเมล (Pulse เสนอ 3 ตัวเลือก Phase 3)",
+        "โดเมนส่ง"
+      ],
+      "team_can_post": true,
+      "signature": "footer 🤖",
+      "open_day": 90
+    },
+    {
+      "id": "x_threads",
+      "name": "X / Threads",
+      "funnel": [
+        "opportunistic"
+      ],
+      "funnel_th": "เฉพาะกิจ (ข่าว/เทค/อังกฤษ)",
+      "formats": [
+        "repost คลิป",
+        "thread สั้น"
+      ],
+      "frequency": "เมื่อมีเหตุ",
+      "ask_prem": [],
+      "api": {
+        "available": "paid",
+        "limits": "X API pay-per-use $0.01/โพสต์ · Basic $200 ปิดรับใหม่",
+        "source": "S10"
+      },
+      "team_can_post": false,
+      "team_post_note": "ไม่แนะนำเปิดใน 90 วันแรก",
+      "open_day": null
+    }
+  ],
+  "content_cascade": "1 คลิปจาก map-story → YouTube Shorts → TikTok (hook แรง) → FB/IG Reels (caption มีบริบท) → LINE/อีเมล (รวมสัปดาห์) → เว็บ (บทความเต็ม + แหล่ง) — Glow ปรับ 1 ต้นฉบับเป็น 5 เวอร์ชัน",
+  "pipeline": {
+    "steps": [
+      {
+        "n": 1,
+        "name": "Marketing Brief",
+        "owner": "10-monday",
+        "output": "ไฟล์ brief: สินค้า · เป้าหมาย · กลุ่ม · ช่อง · deadline · งบ"
+      },
+      {
+        "n": 2,
+        "name": "Strategy doc",
+        "owner": "12-beam",
+        "output": "positioning · key message · ช่อง · calendar · KPI",
+        "gate": "เปรม approve"
+      },
+      {
+        "n": 3,
+        "name": "Draft",
+        "owner": [
+          "121-glow",
+          "122-prism"
+        ],
+        "output": "PR ใน repo marketing (private) — 1 ไฟล์ต่อ draft"
+      },
+      {
+        "n": 4,
+        "name": "QA",
+        "owner": "123-pulse",
+        "checks": [
+          "fact มีแหล่ง",
+          "เสียงแบรนด์",
+          "Rule 6",
+          "ไม่มีข้อมูลลับ/ราคาที่ไม่ยืนยัน",
+          "ลิงก์ใช้ได้"
+        ],
+        "output": "PASS/FAIL comment บน PR เดิม"
+      },
+      {
+        "n": 5,
+        "name": "Review + merge",
+        "owner": "12-beam",
+        "output": "merge เมื่อ QA PASS"
+      },
+      {
+        "n": 6,
+        "name": "Approve to publish",
+        "owner": "เปรม",
+        "gate": "เปรม approve ชุด 'พร้อมโพสต์' (ช่วงแรก) — ปลดทีละช่องเมื่อ QA PASS ติดกัน 20 โพสต์",
+        "note": "ส่งเป็นชุดรายสัปดาห์ เปรมใช้ ≤ 10 นาที/สัปดาห์"
+      },
+      {
+        "n": 7,
+        "name": "Post",
+        "owner": [
+          "เปรม",
+          "team"
+        ],
+        "output": "เปรมกด (ไม่ติดป้าย) หรือทีมกด (ลงชื่อ 🤖)"
+      },
+      {
+        "n": 8,
+        "name": "Measure",
+        "owner": "123-pulse",
+        "output": "ตัวเลขรายสัปดาห์เก็บในไฟล์ใน repo marketing"
+      },
+      {
+        "n": 9,
+        "name": "Report",
+        "owner": [
+          "12-beam",
+          "10-monday"
+        ],
+        "output": "3 บรรทัดถึงเปรม → ปรับ Strategy"
+      }
+    ],
+    "content_status_flow": [
+      "draft",
+      "qa-pass",
+      "approved",
+      "posted",
+      "parked"
+    ],
+    "reporting_contract": {
+      "PROGRESS": "ทุก ~5 นาทีช่วงงานยาว / จบ milestone",
+      "STUCK": "ทันที พร้อมหลักฐาน",
+      "DONE": "พร้อม artifact (PR/path)",
+      "channel": "maw hey 10-monday \"[suki:beam] [<brief-id>] …\""
+    }
+  },
+  "tools": {
+    "tier0_free": {
+      "monthly_thb": 0,
+      "start": "ทันที",
+      "items": [
+        {
+          "need": "ผลิตคลิป",
+          "tool": "map-story (ทีม Software)",
+          "note": "render ในเครื่อง ไม่มี API เสียเงิน"
+        },
+        {
+          "need": "ภาพนิ่ง/thumbnail",
+          "tool": "Canva Free · map-story stills"
+        },
+        {
+          "need": "schedule โพสต์",
+          "tool": "Meta Business Suite (FB+IG) · TikTok Studio · YouTube Studio"
+        },
+        {
+          "need": "วัดผล",
+          "tool": "YouTube Studio · Meta Insights · TikTok Analytics · Search Console · GA4",
+          "note": "Pulse ดึง CSV รายสัปดาห์"
+        },
+        {
+          "need": "LINE",
+          "tool": "LINE OA Free 300 ข้อความ/เดือน",
+          "source": "S3"
+        },
+        {
+          "need": "วิจัย",
+          "tool": "WebSearch/WebFetch · ~/.oracle memory"
+        },
+        {
+          "need": "automation",
+          "tool": "cron/launchd + API ฟรี",
+          "note": "ต้องสิทธิ์บัญชีจากเปรม"
+        }
+      ]
+    },
+    "tier1_light": {
+      "monthly_thb_range": [
+        2500,
+        4500
+      ],
+      "start": "เมื่อโพสต์สม่ำเสมอครบ 30 วัน · เปรมเคาะ",
+      "items": [
+        {
+          "name": "Canva Pro",
+          "ref_price": "$12–18/เดือน",
+          "thb_est": [
+            400,
+            610
+          ],
+          "why": "brand kit · resize 5 ช่อง · bg remover",
+          "source": "S4"
+        },
+        {
+          "name": "Buffer Essentials",
+          "ref_price": "$6/ช่อง/เดือน × 5",
+          "thb_est": [
+            1010,
+            1010
+          ],
+          "why": "schedule รวม + API ให้ทีมโพสต์เอง",
+          "source": "S5"
+        },
+        {
+          "name": "LINE OA Basic",
+          "ref_price": "1,280 บ. + VAT 7%",
+          "thb_est": [
+            1370,
+            1370
+          ],
+          "why": "เมื่อ friends > 300",
+          "source": "S3"
+        },
+        {
+          "name": "Boost post ทดลอง",
+          "ref_price": "เปรมกำหนด",
+          "thb_est": [
+            1000,
+            2000
+          ],
+          "why": "ทดสอบคลิปที่ควรยิง"
+        }
+      ]
+    },
+    "tier2_ads": {
+      "monthly_thb_range": [
+        10000,
+        30000
+      ],
+      "start": "หลัง 60 วัน เมื่อรู้ว่าคอนเทนต์แบบไหนติด · เปรมเคาะ",
+      "items": [
+        {
+          "name": "Meta Ads (FB/IG)",
+          "ref": "CPM ไทย 2026: $1.20–3.20 [S2a] หรือ $3.90, CPC $0.40 [S2b]",
+          "thb_cpm_est": [
+            40,
+            160
+          ],
+          "note": "10,000 บาท ≈ 60k–250k impressions — ช่วงกว้าง ต้องทดลองจริง",
+          "sources": [
+            "S2a",
+            "S2b"
+          ]
+        },
+        {
+          "name": "Google/YouTube Ads",
+          "ref": "CPC ค้นหาไทย median ≈ 6.7 บาท (keyword estimate)",
+          "note": "ใช้เมื่อมีเว็บ + สินค้า (B)",
+          "source": "S2c"
+        },
+        {
+          "name": "TikTok Ads",
+          "ref": null,
+          "note": "ไม่พบตัวเลขไทย 2026 ที่เชื่อถือได้ — Pulse ขอ estimate จาก Ads Manager จริง"
+        },
+        {
+          "name": "Metricool / analytics รวม",
+          "ref": "$25–110/เดือน (แหล่งไม่ตรงกัน)",
+          "note": "เมื่อ 6+ ช่อง",
+          "source": "S5"
+        },
+        {
+          "name": "สร้างภาพ AI (API)",
+          "ref": null,
+          "note": "ยังไม่เสนอ — เริ่มด้วย map-story + Canva"
+        }
+      ]
+    },
+    "rule": "ทีมไม่แตะเงินเอง · ไม่ใช้ API/เครื่องมือเสียเงินจนกว่าเปรมอนุมัติเป็นรายการ"
+  },
+  "roadmap": {
+    "start_condition": "นับจากวันที่เปรมเคาะข้อ 1",
+    "kpi_note": "เป้าที่ตั้งเองสำหรับช่องที่เริ่มจากศูนย์ ไม่ใช่การพยากรณ์ — Pulse ปรับหลัง 30 วัน",
+    "phases": [
+      {
+        "days": [
+          1,
+          30
+        ],
+        "name": "ตั้งฐาน",
+        "actions": [
+          "เปรมเคาะทางเลือก + ชื่อ",
+          "bud Glow + Pulse",
+          "Pulse วิจัย niche/คู่แข่ง 10 ช่อง",
+          "brand kit",
+          "ขอ map-story Phase 2 ผ่าน Monday → Tide",
+          "เปิด YouTube/TikTok/FB",
+          "sprint 1: 12 Shorts + 16 โพสต์ FB",
+          "เปรม approve ทุกชุด"
+        ],
+        "kpis": [
+          {
+            "metric": "โพสต์ตรงปฏิทิน",
+            "target": "≥ 90%"
+          },
+          {
+            "metric": "QA PASS รอบแรก",
+            "target": "≥ 80%"
+          },
+          {
+            "metric": "YouTube subscribers",
+            "target": 100
+          },
+          {
+            "metric": "TikTok followers",
+            "target": 300
+          },
+          {
+            "metric": "Facebook likes",
+            "target": 200
+          },
+          {
+            "metric": "เวลาเปรมใช้เคาะ",
+            "target": "≤ 10 นาที/สัปดาห์"
+          }
+        ]
+      },
+      {
+        "days": [
+          31,
+          60
+        ],
+        "name": "เรียนรู้",
+        "actions": [
+          "วิเคราะห์ 30 วัน → ทำซ้ำ 3 สูตรที่ดีสุด",
+          "เปิด IG (bud Prism) + LINE OA",
+          "เปิดชั้น 1 ถ้าเปรมเคาะ",
+          "ขอ Tide ทำ landing",
+          "ทดลอง boost 2 คลิป (ถ้าเคาะ)"
+        ],
+        "kpis": [
+          {
+            "metric": "followers รวมข้ามช่อง",
+            "target": 1000
+          },
+          {
+            "metric": "Shorts เฉลี่ยวิว/คลิป",
+            "target": "≥ 1,000"
+          },
+          {
+            "metric": "คลิปที่ ≥ 10,000 วิว",
+            "target": 1
+          },
+          {
+            "metric": "LINE friends",
+            "target": 100
+          },
+          {
+            "metric": "ปลดด่าน approve",
+            "target": "1 ช่อง (QA PASS ติดกัน 20 โพสต์)"
+          }
+        ]
+      },
+      {
+        "days": [
+          61,
+          90
+        ],
+        "name": "ขยาย",
+        "actions": [
+          "เว็บ + SEO (บทความ 1/สัปดาห์) + อีเมล",
+          "ประเมิน B ด้วย portfolio 30+ คลิป",
+          "เสนอชั้น 2 (ads) พร้อมตัวเลขจริง",
+          "รายงาน 90 วัน: ไปต่อ/ปรับ/หยุด"
+        ],
+        "kpis": [
+          {
+            "metric": "YouTube subscribers",
+            "target": 1000,
+            "note": "เกณฑ์แรก YPP [S6]"
+          },
+          {
+            "metric": "TikTok followers",
+            "target": 3000
+          },
+          {
+            "metric": "followers รวมข้ามช่อง",
+            "target": 5000
+          },
+          {
+            "metric": "เว็บ sessions/เดือน",
+            "target": 500
+          },
+          {
+            "metric": "รายชื่ออีเมล",
+            "target": 100
+          },
+          {
+            "metric": "ข้อความจากคนสนใจ 'ของ'",
+            "target": "≥ 3 (สัญญาณสำหรับ B)"
+          }
+        ]
+      }
+    ],
+    "weekly_ritual": "Pulse เก็บตัวเลขรายสัปดาห์ → Beam สรุป 3 บรรทัด → Monday → เปรม"
+  },
+  "rule6_policy": {
+    "principle": "Oracle Never Pretends to Be Human — กระจกไม่แกล้งเป็นคน · ลำแสงจันทร์ไม่แกล้งเป็นดวงอาทิตย์",
+    "articles": [
+      {
+        "n": 1,
+        "text": "เนื้อหาที่เปรมอ่าน แก้ และกดโพสต์เอง = เนื้อหาของเปรม ไม่ต้องติดป้าย AI — โหมดเริ่มต้นทุกช่อง"
+      },
+      {
+        "n": 2,
+        "text": "สิ่งที่ทีมโพสต์/ส่ง/ตอบเองโดยตรง ต้องลงชื่อทุกครั้ง",
+        "signature_full": "🤖 โพสต์โดย <oracle> จาก [เปรม] → repo ภายในของทีม Marketing (private)",
+        "signature_short": "🤖 Beam (AI)",
+        "note": "เปรมเคาะเป็นรายช่อง"
+      },
+      {
+        "n": 3,
+        "text": "ตอบคอมเมนต์/แชทได้เฉพาะข้อเท็จจริงที่มีแหล่ง และระบุว่าเป็น AI · ราคา ข้อตกลง ความเห็นของเปรม คำร้องเรียน → ส่งต่อเปรม"
+      },
+      {
+        "n": 4,
+        "text": "ห้ามเด็ดขาด",
+        "forbidden": [
+          "รีวิว/testimonial ปลอม",
+          "แอบอ้างเป็นลูกค้าหรือบุคคลอื่น",
+          "แกล้งเป็นเปรมในที่สาธารณะ",
+          "ซื้อ follower/engagement ปลอม",
+          "อ้างตัวเลขที่ไม่มีแหล่ง",
+          "เปิดเผยข้อมูลภายใน/ลูกค้า/ราคาที่ยังไม่ยืนยัน"
+        ]
+      },
+      {
+        "n": 5,
+        "text": "เมื่อถูกถามว่าเป็น AI ไหม — ตอบตรงเสมอ"
+      },
+      {
+        "n": 6,
+        "text": "ภาพ/วิดีโอ AI ระบุตามนโยบาย platform (altered/synthetic) · map-story credit Natural Earth"
+      },
+      {
+        "n": 7,
+        "text": "Pulse ตรวจข้อ 1–6 ทุกชิ้นก่อน PASS · ละเมิด = FAIL กลับ PR เดิม"
+      }
+    ]
+  },
+  "deliberately_not_done": [
+    "ไม่สมมติสินค้า ไม่ตั้งราคา ไม่ตั้งชื่อแบรนด์ — รอเปรม",
+    "ไม่เปิดบัญชี ไม่สมัครเครื่องมือ ไม่โพสต์ — รอสิทธิ์จากเปรม",
+    "ไม่เปิด repo -oracle และ sunny · อ่านเฉพาะ README ของ repo private อื่น",
+    "ไม่ bud ลูกทีม — รอแผนผ่าน + sprint แรกจริง"
+  ],
+  "questions_for_prem": [
+    {
+      "id": "Q1",
+      "question": "มีสินค้า/บริการจริงที่ขายอยู่หรือตั้งใจจะขายนอก GitHub ไหม ถ้ามีคืออะไร",
+      "default_if_unanswered": "ถือว่าไม่มี → เดิน A",
+      "priority": 1,
+      "answer": "ตอบแล้ว: ถือว่าไม่มี → เดิน A (2026-10-11)"
+    },
+    {
+      "id": "Q2",
+      "question": "ชื่อแบรนด์/ช่อง: ใช้ SUKISTUDIO ได้ไหม หรือตั้งใหม่ · มีโลโก้/สีไหม",
+      "default_if_unanswered": "เสนอ 3 ชื่อ + brand kit ชั่วคราว sprint 1",
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q3",
+      "question": "ถ้า A: หัวข้อแผนที่ที่สนใจจริง (ประวัติศาสตร์/ท่องเที่ยว/ข่าวโลก/เปรียบเทียบ/อื่น) · ไทยก่อนใช่ไหม",
+      "default_if_unanswered": "Pulse วิจัยเสนอ 3 niche ใน 7 วัน",
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q4",
+      "question": "map-story จะเป็น product/บริการขายในอนาคตไหม หรือเครื่องมือภายในตลอด",
+      "default_if_unanswered": "เครื่องมือภายใน → ไม่ทำ B ใน 90 วัน",
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q5",
+      "question": "เปรมโอเคเป็นหน้าแบรนด์บางส่วนไหม (เสียง/ชื่อจริง/ปรากฏตัว) หรือแบรนด์ไร้หน้า",
+      "default_if_unanswered": "แบรนด์ไร้หน้า · เสียงสังเคราะห์ที่ระบุว่า AI (ต้องเคาะเครื่องมือ) หรือคลิปตัวอักษร",
+      "priority": 2,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q6",
+      "question": "โดเมนเว็บ: มีแล้วไหม หรือเสนอซื้อใหม่ (≈ 400–600 บาท/ปี เปรมจ่ายเอง)",
+      "default_if_unanswered": "เสนอ 3 ชื่อ Phase 3",
+      "priority": 4,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q7",
+      "question": "เพดานงบที่เสียเงินช่วง 90 วันแรก/เดือน: 0 · ≤5,000 · ≤15,000 · ≤30,000",
+      "default_if_unanswered": "ชั้น 0 อย่างเดียว",
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q8",
+      "question": "ช่องไหนที่ไม่อยากให้ทีมโพสต์เองเลย แม้ภายหลัง",
+      "default_if_unanswered": "ทุกช่องเริ่มที่เปรมกด ปลดทีละช่อง",
+      "priority": 4,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    },
+    {
+      "id": "Q9",
+      "question": "อยากดูชุดโพสต์เพื่อ approve ผ่านอะไร: GitHub PR / เว็บ (Tide ทำ) / LINE ส่วนตัว",
+      "default_if_unanswered": "PR + สรุปผ่าน Monday",
+      "priority": 3,
+      "answer": "ยังไม่ตอบ → ใช้ default (2026-10-11)"
+    }
+  ],
+  "sources": {
+    "S1": {
+      "title": "DataReportal — Digital 2026: Thailand",
+      "url": "https://datareportal.com/reports/digital-2026-thailand",
+      "note": "ad reach ≠ ผู้ใช้จริง"
+    },
+    "S2a": {
+      "title": "Stackmatix — Facebook Ads CPM by Country 2026",
+      "url": "https://stackmatix.com/blog/facebook-ads-cpm-by-country-2026"
+    },
+    "S2b": {
+      "title": "Adamigo — Meta Ads CPM & CPC Benchmarks by Country 2026",
+      "url": "https://www.adamigo.ai/blog/meta-ads-cpm-cpc-benchmarks-by-country-2026"
+    },
+    "S2c": {
+      "title": "Digital Agency Bangkok — Google Ads Budget 2026 (CPC ไทย · อัตรา 33.7 THB/USD)",
+      "url": "https://digitalagencybangkok.com/how-much-should-you-budget-for-google-ads-in-2026/"
+    },
+    "S3": {
+      "title": "LINE for Business (TH) — ราคา LINE Official Account",
+      "url": "https://lineforbusiness.com/th/service/line-oa-features",
+      "fetched": "2026-10-11"
+    },
+    "S4": {
+      "title": "Piktochart — Canva Pricing 2026",
+      "url": "https://piktochart.com/blog/canva-pricing-2026-costs-raised/",
+      "note": "ราคาบาทหน้าไทยดึงไม่สำเร็จ — Pulse ตรวจซ้ำ"
+    },
+    "S5": {
+      "title": "Buffer — Buffer vs Metricool 2026 · Metricool — Metricool vs Buffer",
+      "url": "https://buffer.com/resources/buffer-vs-metricool/",
+      "url2": "https://metricool.com/metricool-vs-buffer/"
+    },
+    "S6": {
+      "title": "YouTube Help — YouTube Partner Program eligibility",
+      "url": "https://support.google.com/youtube/answer/72851"
+    },
+    "S7": {
+      "title": "Google Developers — YouTube Data API quota",
+      "url": "https://developers.google.com/youtube/v3/guides/quota_and_compliance_audits",
+      "url2": "https://developers.google.com/youtube/v3/determine_quota_cost"
+    },
+    "S8": {
+      "title": "TikTok for Developers — Content Sharing Guidelines",
+      "url": "https://developers.tiktok.com/doc/content-sharing-guidelines"
+    },
+    "S9": {
+      "title": "Meta for Developers — Instagram Content Publishing",
+      "url": "https://developers.facebook.com/docs/instagram-platform/content-publishing"
+    },
+    "S10": {
+      "title": "Postproxy — X API Pricing 2026",
+      "url": "https://www.postproxy.dev/blog/x-api-pricing-2026/"
+    }
+  },
+  "decision": {
+    "option": "A",
+    "label": "A — เคาะ 2026-10-11",
+    "decided_by": "เปรม",
+    "date": "2026-10-11",
+    "via": "Monday (10-monday)",
+    "q1": "ถือว่าไม่มีสินค้า/บริการนอก GitHub",
+    "q2_q9": "ยังไม่ตอบ → ใช้ default ของ Beam ทุกข้อ: เสนอ 3 ชื่อแบรนด์ · Pulse วิจัย 3 niche ใน 7 วัน · map-story = เครื่องมือภายใน · แบรนด์ไร้หน้า · งบชั้น 0 · เปรมกดโพสต์เอง · approve ผ่าน PR + Monday",
+    "next": "sprint 1 ของ A: bud Glow + Pulse → ชื่อแบรนด์ 3 ตัวเลือก + 3 niche พร้อมข้อมูล + draft ชุดแรก (PR ใน repo marketing) · ห้ามโพสต์สาธารณะ เปรม approve ก่อนเสมอ"
+  }
+}
