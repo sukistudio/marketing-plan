@@ -339,11 +339,11 @@
       `<span class="pill">ข้อมูล ณ ${esc(m.date)} <small>· v${esc(m.version)}</small></span>`;
   }
 
-  // ผลการเคาะ (มีใน JSON v2) — แสดงเหนือสรุป
+  // ผลการเคาะ (มีใน JSON v2; brand/niche/first_batch ตั้งแต่ v6) — แสดงเหนือสรุป
   function decision(d) {
     const x = d.decision || d.meta.decision;
     if (!x) return "";
-    const rows = [["เคาะโดย", `${esc(x.decided_by)}${x.via ? ` <span class="muted">ผ่าน ${esc(x.via)}</span>` : ""} · ${esc(x.date)}`], ["Q1", txt(x.q1)], ["Q2–Q9", txt(x.q2_q9)], ["ขั้นต่อไป", txt(x.next)]]
+    const rows = [["เคาะโดย", `${esc(x.decided_by)}${x.via ? ` <span class="muted">ผ่าน ${esc(x.via)}</span>` : ""} · ${esc(x.date)}`], ["Q1", txt(x.q1)], ["Q2–Q9", txt(x.q2_q9)], ["แบรนด์", txt(x.brand)], ["niche", txt(x.niche)], ["ชุดแรก", txt(x.first_batch)], ["ขั้นต่อไป", txt(x.next)]]
       .filter(([, v]) => v && !/^(undefined|null)?$/.test(v));
     return `<div class="decision" role="status"><p class="big">✅ เปรมเคาะแล้ว: ${txt(x.label)}</p><dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl></div>`;
   }
