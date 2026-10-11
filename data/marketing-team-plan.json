@@ -21,7 +21,7 @@
     },
     "signature": "🤖 เขียนโดย Beam Oracle 🌕 (AI) จาก [เปรม] → repo ภายในของทีม Marketing (private)",
     "visibility": "public",
-    "public_note": "ฉบับ public v2: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
+    "public_note": "ฉบับ public v3: ชื่อ repo private 5 รายการแทนด้วย \"ระบบภายใน (private) 5 รายการ\" · ชื่อ repo ของทีม Marketing แทนด้วย \"repo ภายในของทีม Marketing (private)\" · ตัดรายละเอียด layout · + decision A 2026-10-11 · เนื้อหาอื่นเหมือนฉบับเต็ม",
     "decision": {
       "option": "A",
       "label": "A — เคาะ 2026-10-11",
@@ -240,7 +240,7 @@
       "ลูกทีมรายงาน Beam เท่านั้น · Beam รายงาน Monday เท่านั้น",
       "ไม่คุยกับ Ripple/Shore ตรง — งานเว็บ/วิดีโอขอผ่าน Monday → Tide",
       "ทุก oracle รัน bypass permissions (เปรมเคาะ 2026-10-11)",
-      "ลูกทีมมี worktree ของตัวเองใน repo repo ภายในของทีม Marketing (private)"
+      "ลูกทีมมี worktree ของตัวเองใน repo ภายในของทีม Marketing (private)"
     ],
     "repo": {
       "name": "repo ภายในของทีม Marketing (private)",
