@@ -1,0 +1,1 @@
+{ "redirects": [ { "source": "/(.*)", "destination": "https://monday-marketing-plan.vercel.app/$1", "permanent": true } ] }
